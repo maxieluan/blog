@@ -1,6 +1,8 @@
 ~~0. menu style~~
 ~~0.1. menu responsive~~
 ~~-1. responsive for all screen sizes~~
+~~1.1. responsive for main content~~
+~~menu responsive sync with main content~~
 -2. pagination
 -3. dynamic pagination
 ~~-4. Adjust toc~~

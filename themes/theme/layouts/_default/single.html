@@ -1,12 +1,13 @@
 {{- define "main" -}}
     <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto">
-        {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>"}}
+        {{ $toc := (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")}}
+        {{ if $toc }}
         <aside id="toc" class="w-full lg:w-1/4">
             {{ .TableOfContents }}
         </aside>
         {{ end }}
         
-        <main class='main w-full lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}}'>
+        <main class='main w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-1 md:px-0'>
             {{ .Content }}
         </main>
     </div>

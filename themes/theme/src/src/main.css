@@ -99,3 +99,11 @@ h1 {
 #toc ul ul ul ul ul ul {
     padding-left: 5rem;
 }
+
+.h-screen-minus-header {
+    height: calc(100vh - 4rem);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
