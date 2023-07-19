@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: rgb(252, 252, 252);
+    --secondary-color: #4891fd;
+}
+
+/* headings */
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+h6 {
+    @apply text-base;
+}
+
+p {
+    @apply text-base;
+}
+
+/* main.css */
+
+body {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+}
+
+.menu-hide {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .menu-display {
+        display: block;
+    }
+}
+
+.chinese-text {
+    word-break: break-word;
+    overflow: auto;
+}
+
+#toc > nav {
+    border: 1px solid #ccc;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#toc ul ul {
+    padding-left: 1rem;
+}
+
+#toc ul ul ul {
+    padding-left: 2rem;
+}
+
+#toc ul ul ul ul {
+    padding-left: 3rem;
+}
+
+#toc ul ul ul ul ul {
+    padding-left: 4rem;
+}
+
+#toc ul ul ul ul ul ul {
+    padding-left: 5rem;
+}

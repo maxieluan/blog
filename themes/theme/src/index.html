@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My New Hugo Site</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/second.css" />
+  <script src="/js/main.js" defer></script>
+  <script src="/js/secondjs.js"></script>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-row flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          id="btn-navbar"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+
+        <select id="lang" title="language" class="order-2 md:order-1">
+          <option value="en" selected>en</option>
+
+          <option value="zh">zh</option>
+        </select>
+        <span id="currentLang" hidden>en</span>
+
+        <div
+          class="menu-hide w-full menu-display md:w-auto order-1 md:order-2"
+          id="navbar-default"
+        >
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="/"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/posts/"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Posts</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/projects/"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Projects</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/contact/"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>My New Hugo Site</h1>
+
+    <h2>Posts</h2>
+
+    <div class="post">
+      <h2><a href="http://example.org/posts/first-post/">First Post</a></h2>
+      <div class="content">
+        First Post Section 1 lorem ipsum dolor sit amet consectetur adipiscing
+        elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur excepteur sint occaecat cupidatat non proident sunt in culpa
+        qui officia deserunt mollit anim id est laborum
+      </div>
+    </div>
+
+    <div class="post">
+      <h2><a href="http://example.org/posts/second-post/">Second Post</a></h2>
+      <div class="content">
+        Second Post Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Fusce pharetra vitae ex ut aliquet. Aliquam malesuada bibendum semper.
+        Vestibulum vitae velit non ante molestie ultrices. Morbi a mollis metus,
+        vitae finibus ex. Aliquam posuere ullamcorper finibus. Duis vitae lectus
+        at mi dapibus imperdiet. Nam dapibus est nec condimentum placerat.
+        Curabitur placerat leo ex. Nulla facilisi. Fusce a massa id urna
+        vehicula aliquam. Integer malesuada dui a magna luctus, sed cursus
+        ligula pellentesque.
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 w-full mx-auto">
+      <aside id="toc" class="w-full lg:w-1/4">
+        <nav id="TableOfContents">
+          <ul>
+            <li><a href="#這綠瓜">這綠瓜</a></li>
+            <li>
+              <a href="#貝老聽回">貝老聽回</a>
+              <ul>
+                <li><a href="#來朵事">來朵事</a></li>
+                <li><a href="#害米動">害米動</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="main w-full lg:w-1/2">
+        <h1 id="現要習五起休買兩圓不中幾巴包國">
+          現要習五起休買兩圓不中幾巴包國
+        </h1>
+        <h2 id="這綠瓜">這綠瓜</h2>
+        <p>
+          得日實晚旦，節她也園動干常年三片故鼻婆書小常個。背方卜心手二笑怪去力「丟」蝶象用歌羽忍多媽面科六戶火南個包，苦彩飯羊羊中，它手種雲米再，行光己背。
+        </p>
+        <p>
+          兒火高共良只青它豆毛兄吧高信寫內起、二弟笑把自六菜何主；語花四月二年路朱，比植浪日根陽知瓜奶定欠，加古香還也門個司早國松珠路乾。
+        </p>
+        <p>
+          位意園右身早課奶，造燈開尤刃每姊實背再聲五停里房秋呢巾又，科王秋八光送幫唱園每壯秋，爸寸勿乾爪九午美？尺飯法完院多植刀拉友步樹一個住虎，升兌活因告幸，急卜斥各象九花位前愛「路種乙教米相還」今姐她姊。
+        </p>
+        <p>
+          豆你虎！假交兌。山許吹原科辛多葉太蝶果。要加竹父好親你正？故西意免安百放吃能動馬呢：乾或花得想圓念蝶來午林吉申民現幾固晚回對河。
+        </p>
+        <h2 id="貝老聽回">貝老聽回</h2>
+        <p>
+          幸安京你牛父孝林巾經百食丁別筆夏成人心，的人干科造，雲葉不者服書送寫兒兆，功首聲道口足根說皮還林七定申實友，京院白安豆樹怎聲邊功屋爪進回細央。
+        </p>
+        <p>
+          游固交西尺丁成掃色很叫穿抓只坡高，收弓雨姐過男幼內家苗止第河我快千問想動？忍朵吉。步家遠抄來片司給穴害他婆娘。結鳥怕別喜鴨公祖占，申光步空但：人放和貝在肉路吉洋。
+        </p>
+        <p>
+          走荷聽哭大誰記神土跟兄背給洋入邊眼連貓司；十自羽位反從且新兆你根二歌，節假乙鴨珠乾蛋找火出因貓央斤拍找古都次，貓古抓共弓遠昔肉校二錯，旦棵裏怪他員助得鳥旁古扒肖婆見吉到爸。
+        </p>
+        <p>
+          玩讀母半汁才去司門羊也金而旁這片合每卜，信封言根馬入間寫得波色雪媽共秋歌。母里放、鼻可水習未空上由國貝國；是朱友服吧想香百。
+        </p>
+        <h3 id="來朵事">來朵事</h3>
+        <pre><code>想奶馬室朱綠葉苗第尾主經裏，或哪葉面鳥你得五意外火耳兔田！牛水二一林地在，昔一把背嗎兒一聽冰詞助帽。
+</code></pre>
+        <p>
+          背老衣借美給信也呢打流；小入姐你陽，戊己田放一至欠念外禾有牠訴直兩學？穿得左辛麼娘弓回乙有！跑細婆家、辛鴨果士世抱們告幼蝸那燈已衣大，過只風「未聲兩吃放巾尼打」。
+        </p>
+        <p>
+          經房蝴怕長午怪我夕嗎少雄假隻往從耳；動口鳥或，今大發師邊封個、從甲拍、爬幼冬每虎空歌東乞鼻共奶。住字相又。
+        </p>
+        <p>抓尼起「可古孝往坡那娘」蝶扒百。</p>
+        <h3 id="害米動">害米動</h3>
+        <p>
+          次說者鴨詞九兄娘自哭會弓孝首蛋坐夏個，乞汗第流好，愛浪用實旦秋貝蝶家？書羊示麻想出婆爸找王弟波條步水爪用片午，嗎時兌澡交雄辛晚飯主固帽口升呀，風巴由科七乾品身心己回。
+        </p>
+        <p>
+          姐草紅過綠愛友，泉聽大「亭成教甲歌飛好子」聲聲布放，吃送化冒火尾呢左英這「牛左鼻至幸何旦」候筆皮毛像氣孝東雪免也食種蝸親丟害棵。
+        </p>
+        <p>
+          有首跑浪它時條借言民信姊升，洋忍早有枝裝穿牙金父昌扒掃這食、弓象師帽師節眼。貓教吃壯重念向朵：三用身春牛。
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

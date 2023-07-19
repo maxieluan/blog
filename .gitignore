@@ -1,0 +1,8 @@
+# themes/theme/src/node_modules
+themes/theme/src/node_modules
+
+# hugo public directory
+public
+
+# ChatGPT files
+ChatGPT*

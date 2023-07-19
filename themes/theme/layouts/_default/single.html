@@ -1,0 +1,13 @@
+{{- define "main" -}}
+    <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto">
+        {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>"}}
+        <aside id="toc" class="w-full lg:w-1/4">
+            {{ .TableOfContents }}
+        </aside>
+        {{ end }}
+        
+        <main class='main w-full lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}}'>
+            {{ .Content }}
+        </main>
+    </div>
+{{- end -}}

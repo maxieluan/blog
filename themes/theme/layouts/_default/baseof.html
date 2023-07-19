@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head/common.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+
+        <h2>{{ i18n "welcome_message" }}</h2>
+
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer/common.html" . -}}
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{{- define "main" -}}
+<h1>{{ .Title }}</h1>
+{{ if .IsHome }}
+
+{{ range .Sections }}
+<h2>{{ .Title }}</h2>
+{{ range .Pages }}
+<div class="post">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <div class="content">
+        {{ .Summary }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+
+{{ else }}
+{{ range .Pages }}
+<div class="post">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+</div>
+{{ end }}
+{{ end }}
+{{- end -}}
