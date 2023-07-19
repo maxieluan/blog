@@ -2,3 +2,4 @@ table_of_contents: "目录"
 welcome_message: "欢迎来到我的博客"
 
 posts: "文章"
+powered_by: "由 <a href=\"{{.Link}}\">{{.Text}}</a> 驱动"

@@ -1,4 +1,4 @@
-baseURL: 'http://maxieluan.xyz/'
+baseURL: "http://maxieluan.xyz/"
 languageCode: en-us
 title: My New Hugo Site
 theme: theme
@@ -45,3 +45,4 @@ languages:
           name: 联系
           url: /zh/contact/
           weight: 4
+
