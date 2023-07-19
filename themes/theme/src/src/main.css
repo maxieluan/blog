@@ -69,16 +69,16 @@ h1 {
     overflow: auto;
 }
 
-@media (min-width: 1024px) {
-    #toc > nav {
-        margin: 1rem 1rem 1rem 1rem;
-    }
-}
-
 #toc>nav {
     border: 1px solid #ccc;
     margin: 1rem 4px 1rem 4px;
     padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    #toc > nav {
+        margin: 1rem 1rem 1rem 1rem;
+    }
 }
 
 #toc ul {
@@ -107,7 +107,7 @@ h1 {
 }
 
 .h-screen-minus-header {
-    height: calc(100vh - 4rem);
+    min-height: calc(100vh - 5.5rem);
 }
 
 /* Set the scrollbar to be always visible with custom styling */
