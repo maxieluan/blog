@@ -2,7 +2,7 @@
     <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto">
         {{ $toc := (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")}}
         {{ if $toc }}
-        <aside id="toc" class="w-full lg:w-1/4">
+        <aside id="toc" class="w-full lg:w-1/4 ">
             {{ .TableOfContents }}
         </aside>
         {{ end }}

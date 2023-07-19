@@ -11,7 +11,6 @@ module.exports = {
             input: {
                 main: path.resolve(__dirname, 'src/main.js'),
                 maincss: path.resolve(__dirname, 'src/main.css'),
-                secondstyle: path.resolve(__dirname, 'src/second.css'),
                 secondjs: path.resolve(__dirname, 'src/second.js'),
             },
             output: {

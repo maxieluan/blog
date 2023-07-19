@@ -49,3 +49,27 @@ function loadLocalStorage() {
 document.addEventListener("DOMContentLoaded", () => {
     loadLocalStorage();
     });
+
+// let mousemoving = false;
+// document.body.addEventListener("mousemove", () => {
+//     if (!mousemoving) {
+//         document.body.classList.add("show-scrollbar");
+//         mousemoving = true;
+//         setTimeout(() => {
+//             mousemoving = false;
+//             document.body.classList.remove("show-scrollbar");
+//         }, 1000);
+//     }
+// });
+
+// let wheeling = false;
+// document.body.addEventListener("wheel", () => {
+//     if (!wheeling) {
+//         document.body.classList.add("show-scrollbar");
+//         wheeling = true;
+//         setTimeout(() => {
+//             wheeling = false;
+//             document.body.classList.remove("show-scrollbar");
+//         }, 1000);
+//     }
+// });

@@ -18,3 +18,5 @@
 7. tab
 8. box
 9. icons
+10. math
+11. dynamic scrollbar
