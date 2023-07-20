@@ -1,6 +1,6 @@
 {{- define "main" -}}
 
-<main class='main w-full mx-auto md:w-3/4 lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} h-screen-minus-header px-1 md:px-0'>
+<main class='main w-full mx-auto md:w-3/4 lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} h-screen-minus-header px-4 md:px-0'>
     <h1>{{ i18n .Section }}</h1>
     {{ if .IsHome }}
 
@@ -16,14 +16,22 @@
             {{ end }}
         {{ end }}
 
-    {{ else }}
-        {{ $paginator := .Paginate (where .Data.Pages "Type" .Section) 2}}
+    {{ else if .IsSection }}
+        {{/*  {{ if .IsSection }}
+            Section
+        {{ else }}
+            Taxonomy
+        {{ end }}  */}}
+
+        {{ $paginator := .Paginate (where .Data.Pages "Type" .Section) .Site.Params.Pagination.Post}}
         <div class="content-list">
             {{ range $paginator.Pages.GroupByDate "2006" }}
                 <h2>{{ .Key }}</h2>
                 {{ range .Pages }}
-                    <div class="post">
-                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">{{ .Date.Format "Jan 2, 2006" }}</span>
                     </div>
                 {{ end }}
             {{ end }}  
@@ -34,6 +42,8 @@
             {{ partial "pagination.html" . }}
         </nav>
         {{ end }}
+    {{ else }}
+        
     {{ end }}
 </main>
 {{- end -}}

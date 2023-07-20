@@ -45,4 +45,7 @@ languages:
           name: 联系
           url: /zh/contact/
           weight: 4
-
+Params:
+  pagination:
+    post: 10
+    tag: 10

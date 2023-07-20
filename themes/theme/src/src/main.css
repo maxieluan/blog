@@ -10,30 +10,37 @@
 /* headings */
 h1 {
     @apply text-4xl;
+    margin: 0.5rem 0;
 }
 
 h2 {
     @apply text-3xl;
+    margin: 0.5rem 0;
 }
 
 h3 {
     @apply text-2xl;
+    margin: 0.5rem 0;
 }
 
 h4 {
     @apply text-xl;
+    margin: 0.5rem 0;
 }
 
 h5 {
     @apply text-lg;
+    margin: 0.5rem 0;
 }
 
 h6 {
     @apply text-base;
+    margin: 0.5rem 0;
 }
 
 p {
     @apply text-base;
+    margin: 0.5rem 0;
 }
 
 /* main.css */
@@ -69,15 +76,21 @@ h1 {
     overflow: auto;
 }
 
-#toc>nav {
+#toc nav {
     border: 1px solid #ccc;
-    margin: 1rem 4px 1rem 4px;
-    padding: 0.5rem;
+    margin: 0rem 1rem 0rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+    #toc > nav {
+        margin: 0.5rem 0rem 0.5rem 0rem;
+    }
 }
 
 @media (min-width: 1024px) {
     #toc > nav {
-        margin: 1rem 1rem 1rem 1rem;
+        margin: 0rem 1rem 1rem 1rem;
     }
 }
 
@@ -210,4 +223,11 @@ nav.pagination ul {
 
 nav.pagination ul li {
     margin: 0 0.25rem;
+}
+
+.dot-line {
+    border-bottom: 1px dotted #ccc;
+    width: 100%;
+    margin: 0rem 1rem 1.3rem 1rem;
+    flex: 1;
 }
