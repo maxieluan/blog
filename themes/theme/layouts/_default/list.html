@@ -2,38 +2,38 @@
 
 <main class='main w-full mx-auto md:w-3/4 lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} h-screen-minus-header px-1 md:px-0'>
     <h1>{{ i18n .Section }}</h1>
-{{ if .IsHome }}
+    {{ if .IsHome }}
 
-{{ range .Sections }}
-<h2>{{ i18n .Section }}</h2>
-{{ range .Pages }}
-<div class="post">
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <div class="content">
-        {{ .Summary | truncate 200 "..."}}
-    </div>
-</div>
-{{ end }}
-{{ end }}
+        {{ range .Sections }}
+            <h2>{{ i18n .Section }}</h2>
+            {{ range .Pages }}
+                <div class="post">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <div class="summary">
+                        {{ .Summary | truncate 200 "..."}}
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
 
-{{ else }}
-{{ $paginator := .Paginate (where .Data.Pages "Type" .Section) 2}}
-{{ range $paginator.Pages.GroupByDate "2006" }}
-
-<h2>{{ .Key }}</h2>
-{{ range .Pages }}
-<div class="post">
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-</div>
-{{ end }}
-
-{{ end }}
-{{ if gt $paginator.TotalPages 1 }}
-<nav class="pagination">
-    {{/*  {{ template "_internal/pagination.html" . }}  */}}
-    {{ partial "pagination.html" . }}
-</nav>
-{{ end }}
-{{ end }}
+    {{ else }}
+        {{ $paginator := .Paginate (where .Data.Pages "Type" .Section) 2}}
+        <div class="content-list">
+            {{ range $paginator.Pages.GroupByDate "2006" }}
+                <h2>{{ .Key }}</h2>
+                {{ range .Pages }}
+                    <div class="post">
+                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    </div>
+                {{ end }}
+            {{ end }}  
+        </div>
+        {{ if gt $paginator.TotalPages 1 }}
+        <nav class="pagination">
+            {{/*  {{ template "_internal/pagination.html" . }}  */}}
+            {{ partial "pagination.html" . }}
+        </nav>
+        {{ end }}
+    {{ end }}
 </main>
 {{- end -}}

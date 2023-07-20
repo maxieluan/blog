@@ -110,6 +110,10 @@ h1 {
     min-height: calc(100vh - 5.5rem);
 }
 
+.content-list {
+    min-height: calc(100vh - 10rem);
+}
+
 /* Set the scrollbar to be always visible with custom styling */
 /* The thumb color changes on hover */
 /* Other scrollbar styles can also be customized as needed */
