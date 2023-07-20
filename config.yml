@@ -46,6 +46,9 @@ languages:
           name: 联系
           url: /zh/contact/
           weight: 4
+markup:
+  tableOfContents:
+    endLevel: 6
 Params:
   pagination:
     post: 10

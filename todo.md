@@ -11,6 +11,7 @@
 ~~0.2. Language translation setup~~
 ~~0.5. Better h1, h2, ... p~~
 ~~0.6. List style, title left, date right, dot lines in between~~
+~~0.7. i18n title~~
 1. shortcode for code
 2. shortcode for collapsable
 3. table
