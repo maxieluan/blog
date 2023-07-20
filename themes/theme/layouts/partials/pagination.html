@@ -1,0 +1,58 @@
+<ul>
+    {{ $paginator := .Paginator }}
+
+    {{ if eq $paginator.PageNumber 1 }}
+    <li class="disabled">
+        <a href="#" class="pagin-disabled" >{{ T "first" }}</a>
+    </li>
+    {{ else }}
+    <li>
+        <a href="{{ $paginator.First.URL }}" >{{ T "first" }}</a>
+    </li>
+    {{ end }}
+
+    {{ if $paginator.HasPrev }}
+    <li>
+        <a href="{{ $paginator.Prev.URL }}">{{ T "prev" }}</a>
+    </li>
+    {{ else }}
+    <li>
+        <a href="#" class="pagin-disabled" >{{ T "prev" }}</a>
+    </li>
+    {{ end }}
+
+    {{ $idx := 1}}
+    {{ range $paginator.Pagers }}
+    {{ if eq $idx $paginator.PageNumber }}
+    <li>
+        <a href="{{ .URL }}" class="pagin-active" >{{ $idx }}</a>
+    </li>
+    {{ else }}
+    <li>
+        <a href="{{ .URL }}" >{{ $idx }}</a>
+    </li>
+    {{ end }}
+    {{ $idx = add $idx 1 }}
+    {{ end }}
+
+    {{ if $paginator.HasNext }}
+    <li>
+        <a href="{{ $paginator.Next.URL }}" >{{ T "next"}}</a>
+    </li>
+    {{ else }}
+    <li>
+        <a href="#" class="pagin-disabled" >{{ T "next"}}</a>
+    </li>
+    {{ end }}
+    
+    {{ if eq $paginator.PageNumber $paginator.TotalPages }}
+    <li>
+        <a href="#" class="pagin-disabled" >{{ T "last" }}</a>
+    </li>
+    {{ else }}
+    <li>
+        <a href="{{ $paginator.Last.URL }}" >{{ T "last" }}</a>
+    </li>
+    {{ end }}
+
+</ul>

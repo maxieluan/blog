@@ -17,10 +17,22 @@
 {{ end }}
 
 {{ else }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" .Section) 2}}
+{{ range $paginator.Pages.GroupByDate "2006" }}
+
+<h2>{{ .Key }}</h2>
 {{ range .Pages }}
 <div class="post">
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 </div>
+{{ end }}
+
+{{ end }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination">
+    {{/*  {{ template "_internal/pagination.html" . }}  */}}
+    {{ partial "pagination.html" . }}
+</nav>
 {{ end }}
 {{ end }}
 </main>

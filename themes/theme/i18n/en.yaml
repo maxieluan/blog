@@ -3,3 +3,8 @@ welcome_message: "Welcome to my blog"
 
 posts: "Posts"
 powered_by: "Powered by <a href=\"{{.Link}}\">{{.Text}}</a>"
+
+prev: "Prev"
+next: "Next"
+first: "First"
+last: "Last"

@@ -3,3 +3,8 @@ welcome_message: "欢迎来到我的博客"
 
 posts: "文章"
 powered_by: "由 <a href=\"{{.Link}}\">{{.Text}}</a> 驱动"
+
+prev: "上一页"
+next: "下一页"
+first: "首页"
+last: "尾页"

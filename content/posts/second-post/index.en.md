@@ -1,6 +1,6 @@
 ---
 title: "Second Post"
-date: 2023-07-16T11:53:07+0800+08
+date: 2023-07-16T11:53:07+08:00
 draft: false
 tags: ["tag1", "tag3"]
 categories: ["category1", "category3"]

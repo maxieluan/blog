@@ -178,3 +178,32 @@ body.show-scrollbar::-webkit-scrollbar {
     z-index: 9999;
     opacity: 1;
 } */
+
+.pagin-disabled {
+    color: #888888;
+    pointer-events: none;
+    cursor: default;
+}
+
+.pagin-active {
+    color: #ffffff;
+    background-color: #4891fd;
+}
+
+nav.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.pagination ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav.pagination ul li {
+    margin: 0 0.25rem;
+}
