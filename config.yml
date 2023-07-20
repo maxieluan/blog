@@ -1,11 +1,11 @@
 baseURL: "http://maxieluan.xyz/"
 languageCode: en-us
-title: My New Hugo Site
 theme: theme
 languages:
   en:
     languageName: English
     weight: 1
+    title: "Maxie's Place"
     menu:
       main:
         - identifier: home
@@ -27,6 +27,7 @@ languages:
   zh:
     languageName: Chinese
     weight: 2
+    title: "麦克嘻博客"
     menu:
       main:
         - identifier: home
@@ -49,3 +50,4 @@ Params:
   pagination:
     post: 10
     tag: 10
+ 
