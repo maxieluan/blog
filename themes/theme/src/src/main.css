@@ -366,7 +366,7 @@ table td {
     border-radius: 4px;
 }
 
-main a {
+main.post a {
     color: #4891fd;
 }
 

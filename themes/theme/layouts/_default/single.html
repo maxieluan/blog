@@ -19,7 +19,7 @@
         </aside>
         {{ end }}
         
-        <main class='main w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
+        <main class='post w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
             <h1>{{ .Title }}</h1>
             <div class="post-meta flex flex-row">
                 <span class="w-fit">{{ .WordCount }} words</span>
