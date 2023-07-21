@@ -3,12 +3,35 @@
         {{ $toc := (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")}}
         {{ if $toc }}
         <aside id="toc" class="w-full lg:w-1/4">
+            <div id="toc-collapse" class="lg:hidden">
+                <button class="toc-collapse-btn w-full" aria-label="Toggle Table of Contents">
+                    <span class="m-1 flex" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v14a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V4Zm6.707 6.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0-1.414-1.414L12 12.586l-2.293-2.293Z" clip-rule="evenodd"/></svg>
+                        {{/*  {{ i18n "collapse" }}  */}}
+                    </span>
+                    <span class="m-1 flex hidden" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><path fill="currentColor" fill-rule="evenodd" d="M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v14a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V4Zm6.707 6.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0-1.414-1.414L12 12.586l-2.293-2.293Z" clip-rule="evenodd"/></g></svg>
+                        {{/*  {{ i18n "expand" }}  */}}
+                    </span>
+                </button>
+            </div>
             {{ .TableOfContents }}
         </aside>
         {{ end }}
         
         <main class='main w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
+            <h1>{{ .Title }}</h1>
+            <div class="post-meta flex flex-row">
+                <span class="w-fit">{{ .WordCount }} words</span>
+                &nbsp;·&nbsp;
+                <span class="w-fit">{{ .ReadingTime }}</span>
+                
+            </div>
+                
             {{ .Content }}
+            <div class="post-footer flex flex-row">
+                <span class="w-fit">{{ .Date.Format "Jan 2, 2006" }}</span>
+            </div>
         </main>
     </div>
 {{- end -}}

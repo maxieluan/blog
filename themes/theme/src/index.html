@@ -1,300 +1,780 @@
 <!DOCTYPE html>
-<html>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My New Hugo Site</title>
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/second.css" />
-  <script src="/js/main.js" defer></script>
-  <script src="/js/secondjs.js"></script>
-  <body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-      <div
-        class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:py-4 md:px-1 p-4"
-      >
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-          id="btn-navbar"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxie&#39;s Place</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
         </button>
-
-        <select id="lang" title="language" class="order-2 md:order-1">
-          <option value="en" selected>en</option>
-
-          <option value="zh">zh</option>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
         </select>
         <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
 
-        <div
-          class="menu-hide w-full menu-display md:w-auto order-1 md:order-2"
-          id="navbar-default"
-        >
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-          >
-            <li>
-              <a
-                href="/"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                >Home</a
-              >
-            </li>
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">Home</a>
+                </li>
+                
+                
 
-            <li>
-              <a
-                href="/posts/"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Posts</a
-              >
-            </li>
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
 
-            <li>
-              <a
-                href="/projects/"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Projects</a
-              >
-            </li>
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
 
-            <li>
-              <a
-                href="/contact/"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Contact</a
-              >
-            </li>
-          </ul>
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
         </div>
-      </div>
-    </nav>
-    <h1>My New Hugo Site</h1>
 
-    <h2>Posts</h2>
-
-    <div class="post">
-      <h2><a href="http://example.org/posts/first-post/">First Post</a></h2>
-      <div class="content">
-        First Post Section 1 lorem ipsum dolor sit amet consectetur adipiscing
-        elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur excepteur sint occaecat cupidatat non proident sunt in culpa
-        qui officia deserunt mollit anim id est laborum
-      </div>
     </div>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1></h1>
+    
 
-    <div class="post">
-      <h2><a href="http://example.org/posts/second-post/">Second Post</a></h2>
-      <div class="content">
-        Second Post Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Fusce pharetra vitae ex ut aliquet. Aliquam malesuada bibendum semper.
-        Vestibulum vitae velit non ante molestie ultrices. Morbi a mollis metus,
-        vitae finibus ex. Aliquam posuere ullamcorper finibus. Duis vitae lectus
-        at mi dapibus imperdiet. Nam dapibus est nec condimentum placerat.
-        Curabitur placerat leo ex. Nulla facilisi. Fusce a massa id urna
-        vehicula aliquam. Integer malesuada dui a magna luctus, sed cursus
-        ligula pellentesque.
-      </div>
+        
+            <h2>Posts</h2>
+            
+                <div class="post">
+                    <h2><a href="http://maxieluan.xyz/posts/example/">example page</a></h2>
+                    <div class="summary">
+                        headings h1 h2 h3 h4 h5 h6 text This is a paragraph with bold text and italic text and code.
+line breaks This is the first line.
+And this is the second line.
+horizontal rules Footnotes Here&rsquo;s a...
+                    </div>
+                </div>
+            
+                <div class="post">
+                    <h2><a href="http://maxieluan.xyz/posts/second-post/">Second Post</a></h2>
+                    <div class="summary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra vitae ex ut aliquet. Aliquam malesuada bibendum semper. Vestibulum vitae velit non ante molestie ultrices. Morbi a mollis metus,...
+                    </div>
+                </div>
+            
+                <div class="post">
+                    <h2><a href="http://maxieluan.xyz/posts/fourth-post/">Fourth Post</a></h2>
+                    <div class="summary">
+                        Section 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris...
+                    </div>
+                </div>
+            
+                <div class="post">
+                    <h2><a href="http://maxieluan.xyz/posts/third-post/">Third Post</a></h2>
+                    <div class="summary">
+                        Section 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris...
+                    </div>
+                </div>
+            
+                <div class="post">
+                    <h2><a href="http://maxieluan.xyz/posts/first-post/">First Post First Post First Post First Post First Post  First</a></h2>
+                    <div class="summary">
+                        Section 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris...
+                    </div>
+                </div>
+            
+        
+
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
+
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
     </div>
-    <main class="main w-full mx-auto lg:w-1/2 px-4 md:px-0 h-full">
-      <h1>Posts</h1>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1>Posts</h1>
+    
+        
 
-      <div class="post">
-        <h2><a href="http://maxieluan.xyz/posts/first-post/">First Post</a></h2>
-      </div>
+        
+        <div class="content-list">
+            
+                <h2>2023</h2>
+                
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="http://maxieluan.xyz/posts/example/">example page</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">Jul 21, 2023</span>
+                    </div>
+                
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="http://maxieluan.xyz/posts/second-post/">Second Post</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">Jul 16, 2023</span>
+                    </div>
+                
+            
+                <h2>2022</h2>
+                
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="http://maxieluan.xyz/posts/fourth-post/">Fourth Post</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">May 20, 2022</span>
+                    </div>
+                
+            
+                <h2>2021</h2>
+                
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="http://maxieluan.xyz/posts/third-post/">Third Post</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">May 20, 2021</span>
+                    </div>
+                
+            
+                <h2>2020</h2>
+                
+                    <div class="post flex-row flex flex-1">
+                        <h5><a href="http://maxieluan.xyz/posts/first-post/">First Post First Post First Post First Post First Post  First</a></h5>
+                        <div class="dot-line"></div>
+                        <span class="my-auto">May 20, 2020</span>
+                    </div>
+                
+              
+        </div>
+        
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>example page</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
 
-      <div class="post">
-        <h2>
-          <a href="http://maxieluan.xyz/posts/second-post/">Second Post</a>
-        </h2>
-      </div>
-    </main>
-    <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 w-full mx-auto">
-      <aside id="toc" class="w-full lg:w-1/4 mx-0 md:mx-auto">
-        <nav id="TableOfContents">
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+</nav><div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto h-screen-minus-header">
+        
+        
+        <aside id="toc" class="w-full lg:w-1/4">
+            <div id="toc-collapse" class="lg:hidden">
+                <button class="toc-collapse-btn w-full" aria-label="Toggle Table of Contents">
+                    <span class="m-1" >Collapse</span>
+                    <span class="m-1 hidden" >Expand</span>
+                </button>
+            </div>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">h2</a>
+      <ul>
+        <li><a href="#h3">h3</a>
           <ul>
-            <li><a href="#這綠瓜">這綠瓜</a></li>
-            <li>
-              <a href="#貝老聽回">貝老聽回</a>
+            <li><a href="#h4">h4</a>
               <ul>
-                <li><a href="#來朵事">來朵事</a></li>
-                <li><a href="#害米動">害米動</a></li>
+                <li><a href="#h5">h5</a>
+                  <ul>
+                    <li><a href="#h6">h6</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
-        </nav>
-      </aside>
-      <main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
-        <h1>Posts</h1>
-        
-            
-    
-            
-            <div class="content-list">
-                
-                    <h2>2023</h2>
-                    
-                        <div class="post flex-row flex flex-1">
-                            <h5><a href="http://maxieluan.xyz/posts/second-post/">Second Post</a></h5>
-                            <span class="my-auto">Jul 16, 2023</span>
-                        </div>
-                    
-                
-                    <h2>2022</h2>
-                    
-                        <div class="post flex-row flex flex-1">
-                            <h5><a href="http://maxieluan.xyz/posts/fourth-post/">Fourth Post</a></h5>
-                            <span class="my-auto">May 20, 2022</span>
-                        </div>
-                    
-                
-                    <h2>2021</h2>
-                    
-                        <div class="post flex-row flex flex-1">
-                            <h5><a href="http://maxieluan.xyz/posts/third-post/">Third Post</a></h5>
-                            <span class="my-auto">May 20, 2021</span>
-                        </div>
-                    
-                
-                    <h2>2020</h2>
-                    
-                        <div class="post flex-row flex flex-1">
-                            <h5><a href="http://maxieluan.xyz/posts/first-post/">First Post</a></h5>
-                            <span class="my-auto">May 20, 2020</span>
-                        </div>
-                    
-                  
-            </div>
-            
-        
-    </main>
-      <main class="main w-full lg:w-1/2">
-        <h1 id="現要習五起休買兩圓不中幾巴包國">
-          現要習五起休買兩圓不中幾巴包國
-        </h1>
-        <h2 id="這綠瓜">這綠瓜</h2>
-        <p>
-          得日實晚旦，節她也園動干常年三片故鼻婆書小常個。背方卜心手二笑怪去力「丟」蝶象用歌羽忍多媽面科六戶火南個包，苦彩飯羊羊中，它手種雲米再，行光己背。
-        </p>
-        <p>
-          兒火高共良只青它豆毛兄吧高信寫內起、二弟笑把自六菜何主；語花四月二年路朱，比植浪日根陽知瓜奶定欠，加古香還也門個司早國松珠路乾。
-        </p>
-        <p>
-          位意園右身早課奶，造燈開尤刃每姊實背再聲五停里房秋呢巾又，科王秋八光送幫唱園每壯秋，爸寸勿乾爪九午美？尺飯法完院多植刀拉友步樹一個住虎，升兌活因告幸，急卜斥各象九花位前愛「路種乙教米相還」今姐她姊。
-        </p>
-        <p>
-          豆你虎！假交兌。山許吹原科辛多葉太蝶果。要加竹父好親你正？故西意免安百放吃能動馬呢：乾或花得想圓念蝶來午林吉申民現幾固晚回對河。
-        </p>
-        <h2 id="貝老聽回">貝老聽回</h2>
-        <p>
-          幸安京你牛父孝林巾經百食丁別筆夏成人心，的人干科造，雲葉不者服書送寫兒兆，功首聲道口足根說皮還林七定申實友，京院白安豆樹怎聲邊功屋爪進回細央。
-        </p>
-        <p>
-          游固交西尺丁成掃色很叫穿抓只坡高，收弓雨姐過男幼內家苗止第河我快千問想動？忍朵吉。步家遠抄來片司給穴害他婆娘。結鳥怕別喜鴨公祖占，申光步空但：人放和貝在肉路吉洋。
-        </p>
-        <p>
-          走荷聽哭大誰記神土跟兄背給洋入邊眼連貓司；十自羽位反從且新兆你根二歌，節假乙鴨珠乾蛋找火出因貓央斤拍找古都次，貓古抓共弓遠昔肉校二錯，旦棵裏怪他員助得鳥旁古扒肖婆見吉到爸。
-        </p>
-        <p>
-          玩讀母半汁才去司門羊也金而旁這片合每卜，信封言根馬入間寫得波色雪媽共秋歌。母里放、鼻可水習未空上由國貝國；是朱友服吧想香百。
-        </p>
-        <h3 id="來朵事">來朵事</h3>
-        <pre><code>想奶馬室朱綠葉苗第尾主經裏，或哪葉面鳥你得五意外火耳兔田！牛水二一林地在，昔一把背嗎兒一聽冰詞助帽。
-</code></pre>
-        <p>
-          背老衣借美給信也呢打流；小入姐你陽，戊己田放一至欠念外禾有牠訴直兩學？穿得左辛麼娘弓回乙有！跑細婆家、辛鴨果士世抱們告幼蝸那燈已衣大，過只風「未聲兩吃放巾尼打」。
-        </p>
-        <p>
-          經房蝴怕長午怪我夕嗎少雄假隻往從耳；動口鳥或，今大發師邊封個、從甲拍、爬幼冬每虎空歌東乞鼻共奶。住字相又。
-        </p>
-        <p>抓尼起「可古孝往坡那娘」蝶扒百。</p>
-        <h3 id="害米動">害米動</h3>
-        <p>
-          次說者鴨詞九兄娘自哭會弓孝首蛋坐夏個，乞汗第流好，愛浪用實旦秋貝蝶家？書羊示麻想出婆爸找王弟波條步水爪用片午，嗎時兌澡交雄辛晚飯主固帽口升呀，風巴由科七乾品身心己回。
-        </p>
-        <p>
-          姐草紅過綠愛友，泉聽大「亭成教甲歌飛好子」聲聲布放，吃送化冒火尾呢左英這「牛左鼻至幸何旦」候筆皮毛像氣孝東雪免也食種蝸親丟害棵。
-        </p>
-        <p>
-          有首跑浪它時條借言民信姊升，洋忍早有枝裝穿牙金父昌扒掃這食、弓象師帽師節眼。貓教吃壯重念向朵：三用身春牛。
-        </p>
-      </main>
-    </div>
-    <nav class="pagination">
-    
-      <ul class="pagination pagination-default">
-        <li class="page-item">
-          <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        <li class="page-item">
-          <a href="/posts/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        <li class="page-item">
-          <a href="/posts/" aria-label="Page 1" class="page-link" role="button">1</a>
-        </li>
-        <li class="page-item active">
-          <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
-        </li>
-        <li class="page-item disabled">
-          <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        <li class="page-item disabled">
-          <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
         </li>
       </ul>
+    </li>
+    <li><a href="#text">text</a></li>
+    <li><a href="#line-breaks">line breaks</a></li>
+    <li><a href="#horizontal-rules">horizontal rules</a></li>
+    <li><a href="#footnotes">Footnotes</a></li>
+    <li><a href="#heading-ids">Heading IDs</a>
       <ul>
-      
-  
-      
-      <li>
-          <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Previous</a>
-      </li>
-      
-  
-      
-      
-      
-      <li>
-          <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">1</a>
-      </li>
-      
-      
-      
-      
-      <li>
-          <a href="/posts/page/2/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">2</a>
-      </li>
-      
-      
-      
-  
-      
-  
+        <li><a href="#custom-id">My Great Heading</a></li>
+      </ul>
+    </li>
+    <li><a href="#defining-lists">Defining Lists</a></li>
+    <li><a href="#strikethrough">StrikeThrough</a></li>
+    <li><a href="#task-lists">Task Lists</a></li>
+    <li><a href="#emoji">Emoji</a></li>
+    <li><a href="#html">HTML</a></li>
+    <li><a href="#mathjax">MathJax</a></li>
+    <li><a href="#blockquote">blockquote</a></li>
+    <li><a href="#list">list</a>
+      <ul>
+        <li><a href="#unordered-list">unordered list</a></li>
+        <li><a href="#ordered-list">ordered list</a></li>
+      </ul>
+    </li>
+    <li><a href="#code">code</a></li>
+    <li><a href="#table">table</a></li>
+    <li><a href="#link">link</a></li>
+    <li><a href="#image">image</a></li>
   </ul>
-  </nav>
-    <footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
-      Powered by <a href="https://gohugo.io">Hugo</a>
-  </footer>
-  </body>
+</nav>
+        </aside>
+        
+        
+        <main class='main w-full lg:w-1/2   px-4 md:px-0'>
+            <h1>example page</h1>
+            <div class="post-meta flex flex-row">
+                <span class="w-fit">185 words</span>
+                &nbsp;·&nbsp;
+                <span class="w-fit">1</span>
+                
+            </div>
+                
+            <h2 id="headings">headings</h2>
+<h1 id="h1">h1</h1>
+<h2 id="h2">h2</h2>
+<h3 id="h3">h3</h3>
+<h4 id="h4">h4</h4>
+<h5 id="h5">h5</h5>
+<h6 id="h6">h6</h6>
+<h2 id="text">text</h2>
+<p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em> and <code>code</code>.</p>
+<h2 id="line-breaks">line breaks</h2>
+<p>This is the first line.<br>
+And this is the second line.</p>
+<h2 id="horizontal-rules">horizontal rules</h2>
+<hr>
+<hr>
+<hr>
+<h2 id="footnotes">Footnotes</h2>
+<p>Here&rsquo;s a simple footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and here&rsquo;s a longer one<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="heading-ids">Heading IDs</h2>
+<h3 id="custom-id">My Great Heading</h3>
+<h2 id="defining-lists">Defining Lists</h2>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition 1
+Term 2</dd>
+<dd>Definition 2</dd>
+</dl>
+<h2 id="strikethrough">StrikeThrough</h2>
+<p><del>The world is flat.</del> We now know that the world is round.</p>
+<h2 id="task-lists">Task Lists</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
+<li><input disabled="" type="checkbox"> Update the website</li>
+</ul>
+<h2 id="emoji">Emoji</h2>
+<p>Not implemented yet. needs shortcode
+Gone camping! :tent: Be back soon.</p>
+<p>That is so funny! :joy:</p>
+<h2 id="html">HTML</h2>
+<p>Not implemented yet. needs shortcode</p>
+<h2 id="mathjax">MathJax</h2>
+<p>Not implemented yet. needs shortcode</p>
+<h2 id="blockquote">blockquote</h2>
+<blockquote>
+<p>This is a blockquote following a header.</p>
+</blockquote>
+<h2 id="list">list</h2>
+<h3 id="unordered-list">unordered list</h3>
+<ul>
+<li>item 1</li>
+<li>item 2
+<ul>
+<li>item 2.1</li>
+<li>item 2.2</li>
+</ul>
+</li>
+<li>item 3
+<ul>
+<li>item 3.1
+<ul>
+<li>item 3.1.1</li>
+<li>item 3.1.2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ordered-list">ordered list</h3>
+<ol>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3
+<ol>
+<li>item 3.1</li>
+<li>item 3.2</li>
+</ol>
+</li>
+<li>item 4
+<ol>
+<li>item 4.1
+<ol>
+<li>item 4.1.1</li>
+<li>item 4.1.2</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="code">code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="table">table</h2>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<h2 id="link">link</h2>
+<p><a href="https://example.com">link</a></p>
+<h2 id="image">image</h2>
+<p><img src="https://octodex.github.com/images/minion.png" alt="Minion"></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is the first footnote.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>This is the second footnote.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            <div class="post-footer flex flex-row">
+                <span class="w-fit">Jul 21, 2023</span>
+            </div>
+        </main>
+    </div><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tags</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
+
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1></h1>
+    
+        
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tag1</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
+
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1></h1>
+    
+        
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
+
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1></h1>
+    
+        
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
+</html>
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>category1</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/second.css">
+<script src="/js/main.js" defer></script>
+<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        
+        <select id="lang" title="language" class="order-1 md:order-2">
+        
+            <option value="en"  selected  >en</option>
+        
+            <option value="zh"  >zh</option>
+        
+        </select>
+        <span id="currentLang" hidden>en</span>
+        
+        <div class="menu-hide w-full menu-display lg:mx-auto md:w-auto order-2 md:order-1" id="navbar-menu">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                
+
+                
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/posts/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/projects/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                </li>
+                
+                
+
+                
+                <li>
+                    <a href="/contact/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+</nav><main class='main w-full mx-auto md:w-3/4 lg:w-1/2  h-screen-minus-header px-4 md:px-0'>
+    <h1></h1>
+    
+        
+    
+</main><footer class="lg:w-1/2 md:w-3/4 w-full mx-auto text-center ">
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a>
+</footer></body>
 </html>

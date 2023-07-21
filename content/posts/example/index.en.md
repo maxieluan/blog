@@ -6,7 +6,6 @@ tags: ["tag1", "tag2"]
 categories: ["category1", "category2"]
 description: "This is the first post."
 ---
-# example page
 ## headings
 # h1
 ## h2

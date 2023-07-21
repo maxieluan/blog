@@ -8,3 +8,6 @@ prev: "Prev"
 next: "Next"
 first: "First"
 last: "Last"
+
+collapse: "Collapse"
+expand: "Expand"

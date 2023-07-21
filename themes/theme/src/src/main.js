@@ -1,6 +1,7 @@
 const language = document.getElementById("lang");
 const btnNavbar = document.getElementById("btn-navbar");
 const menu = document.getElementById("navbar-menu");
+const btnTocCollapse = document.getElementById("toc-collapse");
 
 language.addEventListener("change", (e) => {
   const newLanguage = e.target.value;
@@ -73,3 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
 //         }, 1000);
 //     }
 // });
+
+btnTocCollapse.addEventListener("click", () => {
+    const toc = document.getElementById("TableOfContents");
+    toc.classList.toggle("small-hidden");
+    // find by selector, btnTocCollapse > span
+    const btnTocCollapseSpan = btnTocCollapse.querySelectorAll("span");
+    // span toggle hidden
+    btnTocCollapseSpan.forEach((span) => {
+        span.classList.toggle("hidden");
+    })
+});
