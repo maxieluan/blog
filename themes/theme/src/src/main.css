@@ -116,7 +116,8 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
+
     /* lg:hidden */
     .small-hidden {
         display: none;
@@ -271,3 +272,78 @@ nav.pagination ul li {
 .post-meta {
     border-bottom: 1px solid #ccc;
 }
+
+.post-meta a {
+    color: #4891fd;
+    display: block;
+    margin-right: 0.5rem;
+}
+
+.post-footer {
+    border-top: 1px solid #ccc;
+    flex: 1;
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight pre {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 1rem;
+    /* white-space: pre-wrap; */
+}
+
+.highlight pre::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+    background-color: #d4caca;
+}
+
+.highlight pre::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Style for the copy button */
+.copy-button {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    color: #333;
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-left: 5px;
+    font-size: 0.4rem;
+    position: absolute;
+    top: 0.5rem;
+    left: calc(100% - 4rem);
+    z-index: 9999;
+}
+
+.copy-button:hover {
+    background-color: #ddd;
+}
+
+main ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+main ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+}
+
+/* 
+This is removed for bullet and number somehow are left of the screen
+I need padding to make room for them. 
+
+main>ul {
+    padding-left: 0;
+}
+
+main>ol {
+    padding-left: 0;
+} */

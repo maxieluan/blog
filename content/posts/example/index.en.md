@@ -88,7 +88,7 @@ Not implemented yet. needs shortcode
 ## code
 ```go
 func main() {
-    fmt.Println("Hello World!")
+    fmt.Println("Hello World! a very long content, intentionally to test the line wrap.")
 }
 ```
 

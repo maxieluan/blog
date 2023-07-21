@@ -25,12 +25,20 @@
                 <span class="w-fit">{{ .WordCount }} words</span>
                 &nbsp;·&nbsp;
                 <span class="w-fit">{{ .ReadingTime }}</span>
-                
+                &nbsp;·&nbsp;
+                <span class="w-fit flex-1">{{ .Date.Format "Jan 2, 2006" }}</span>
+                {{ if .Params.tags }}
+                <div class="tags flex flex-row">
+                    {{ range .Params.tags }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
             </div>
                 
             {{ .Content }}
             <div class="post-footer flex flex-row">
-                <span class="w-fit">{{ .Date.Format "Jan 2, 2006" }}</span>
+                {{/*  tags  */}}
             </div>
         </main>
     </div>

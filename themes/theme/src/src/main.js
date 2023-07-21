@@ -48,8 +48,8 @@ function loadLocalStorage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadLocalStorage();
-    });
+  loadLocalStorage();
+});
 
 // let mousemoving = false;
 // document.body.addEventListener("mousemove", () => {
@@ -76,12 +76,47 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 btnTocCollapse.addEventListener("click", () => {
-    const toc = document.getElementById("TableOfContents");
-    toc.classList.toggle("small-hidden");
-    // find by selector, btnTocCollapse > span
-    const btnTocCollapseSpan = btnTocCollapse.querySelectorAll("span");
-    // span toggle hidden
-    btnTocCollapseSpan.forEach((span) => {
-        span.classList.toggle("hidden");
-    })
+  const toc = document.getElementById("TableOfContents");
+  toc.classList.toggle("small-hidden");
+  // find by selector, btnTocCollapse > span
+  const btnTocCollapseSpan = btnTocCollapse.querySelectorAll("span");
+  // span toggle hidden
+  btnTocCollapseSpan.forEach((span) => {
+    span.classList.toggle("hidden");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const codeBlocks = document.querySelectorAll("pre code");
+  const preBlocks = document.querySelectorAll("pre");
+  const highlights = document.querySelectorAll(".highlight");
+
+  preBlocks.forEach((preBlock) => {
+    const copyButton = document.createElement("button");
+    copyButton.className = "copy-button hidden";
+    copyButton.type = "button";
+    copyButton.innerText = "Copy";
+    copyButton.addEventListener("click", () => {
+      navigator.clipboard.writeText(preBlock.innerText);
+      copyButton.innerText = "Copied!";
+    });
+    preBlock.parentNode.insertBefore(copyButton, preBlock);
+  });
+
+  highlights.forEach((highlight) => {
+    highlight.addEventListener("mouseenter", () => {
+      const copyButton = highlight.querySelector(".copy-button");
+      copyButton.classList.remove("hidden");
+    });
+  });
+
+  highlights.forEach((highlight) => {
+    highlight.addEventListener("mouseleave", () => {
+      const copyButton = highlight.querySelector(".copy-button");
+      copyButton.classList.add("hidden");
+      if (copyButton.innerText === "Copied!") {
+        copyButton.innerText = "Copy";
+      }
+    });
+  });
 });

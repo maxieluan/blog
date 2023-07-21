@@ -8,14 +8,15 @@
 ~~-4. Adjust toc~~
 ~~collapsable toc~~
 4.1 highlight current toc section
--5. meta for posts
+~~-5. meta for posts~~
 ~~0.2. Language translation setup~~
 ~~0.5. Better h1, h2, ... p~~
 ~~0.6. List style, title left, date right, dot lines in between~~
 ~~0.7. i18n title~~
 ~~0.75. example pages~~
 0.8. default markdown style
-2. collapsable quote and code
+~~2. code highlight style and copy button~~
+2.5 list
 3. table
 4. image gallery
 5. file download
