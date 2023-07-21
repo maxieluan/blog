@@ -93,12 +93,10 @@ func main() {
 ```
 
 ## table
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-
+| Syntax | Description | Test Text | Intentionally to test the line wrap. | Another intentionally to test the line wrap. | Yet another intentionally to test the line wrap. | Averylongwordthatteststhelinebreak. |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Header | Title | Here's this | Here's this | Here's this | Here's this | Here's this |
+| Paragraph | Text | And more | Here's this | Here's this | Here's this | Here's this |
 ## link
 [link](https://example.com)
 

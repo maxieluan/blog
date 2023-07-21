@@ -120,3 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tables = document.querySelectorAll("table");
+    tables.forEach((table) => {
+        const div = document.createElement("div");
+        div.className = "table-container";
+        // wrap table with div
+        table.parentNode.insertBefore(div, table);
+        div.appendChild(table);
+    });
+});

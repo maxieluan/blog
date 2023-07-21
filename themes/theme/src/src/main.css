@@ -336,6 +336,40 @@ main ol {
     padding-left: 1rem;
 }
 
+table {
+    border: 1px solid #ccc;
+}
+
+table th {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+}
+
+table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+.table-container::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+    background-color: #d4caca;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+main a {
+    color: #4891fd;
+}
+
 /* 
 This is removed for bullet and number somehow are left of the screen
 I need padding to make room for them.

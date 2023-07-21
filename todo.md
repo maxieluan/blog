@@ -16,7 +16,7 @@
 ~~0.75. example pages~~
 0.8. default markdown style
 ~~2. code highlight style and copy button~~
-2.5 list
+~~2.5 list~~
 3. table
 4. image gallery
 5. file download
