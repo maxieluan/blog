@@ -87,7 +87,6 @@ btnTocCollapse.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const codeBlocks = document.querySelectorAll("pre code");
   const preBlocks = document.querySelectorAll("pre");
   const highlights = document.querySelectorAll(".highlight");
 
@@ -99,6 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     copyButton.addEventListener("click", () => {
       navigator.clipboard.writeText(preBlock.innerText);
       copyButton.innerText = "Copied!";
+
+      setTimeout(() => {
+        copyButton.innerText = "Copy";
+      }, 1000);
     });
     preBlock.parentNode.insertBefore(copyButton, preBlock);
   });
@@ -114,9 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     highlight.addEventListener("mouseleave", () => {
       const copyButton = highlight.querySelector(".copy-button");
       copyButton.classList.add("hidden");
-      if (copyButton.innerText === "Copied!") {
-        copyButton.innerText = "Copy";
-      }
     });
-  });
+  })
 });

@@ -338,7 +338,7 @@ main ol {
 
 /* 
 This is removed for bullet and number somehow are left of the screen
-I need padding to make room for them. 
+I need padding to make room for them.
 
 main>ul {
     padding-left: 0;
