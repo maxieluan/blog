@@ -11,7 +11,7 @@ module.exports = {
             input: {
                 main: path.resolve(__dirname, 'src/main.js'),
                 maincss: path.resolve(__dirname, 'src/main.css'),
-                secondjs: path.resolve(__dirname, 'src/second.js'),
+                math: path.resolve(__dirname, 'src/math.js'),
             },
             output: {
                 entryFileNames: 'js/[name].js',

@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: rgb(252, 252, 252);
-    --secondary-color: #4891fd;
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(27, 147, 245);
+    --tertiary-color: #38b142;
+    --link-color: #4891fd;
+    --button-color: #4891fd;
 }
 
 /* headings */
@@ -38,6 +41,56 @@ h6 {
     margin: 0.5rem 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    @apply flex;
+}
+
+h1 svg, h2 svg, h3 svg, h4 svg, h5 svg, h6 svg {
+    color: var(--tertiary-color);
+}
+
+h1 svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+h2 svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+h3 svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.55rem;
+    margin-right: 0.5rem;
+}
+
+h4 svg {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+}
+
+h5 svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+}
+
+h6 svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: 0.35rem;
+    margin-right: 0.5rem;
+}
+
 p {
     @apply text-base;
     margin: 0.5rem 0;
@@ -54,7 +107,7 @@ h1 {
 }
 
 .btn {
-    background-color: blue;
+    background-color: var(--button-color);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -274,7 +327,7 @@ nav.pagination ul li {
 }
 
 .post-meta a {
-    color: #4891fd;
+    color: var(--link-color);
     display: block;
     margin-right: 0.5rem;
 }
@@ -289,7 +342,7 @@ nav.pagination ul li {
 }
 
 .highlight pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding: 1rem;
     /* white-space: pre-wrap; */
@@ -352,7 +405,7 @@ table td {
 }
 
 .table-container {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .table-container::-webkit-scrollbar {
@@ -381,3 +434,7 @@ main>ul {
 main>ol {
     padding-left: 0;
 } */
+
+.math {
+    font-size: 1.5rem;
+}

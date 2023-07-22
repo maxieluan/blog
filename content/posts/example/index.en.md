@@ -57,8 +57,11 @@ That is so funny! :joy:
 ## HTML
 Not implemented yet. needs shortcode
 
-## MathJax
-Not implemented yet. needs shortcode
+## Katex
+{{< katex math=`% \f is defined as #1f(#2) using the macro
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi` >}}
 
 ## blockquote
 > This is a blockquote following a header.

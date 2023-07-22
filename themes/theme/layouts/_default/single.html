@@ -21,21 +21,24 @@
         
         <main class='post w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
             <h1>{{ .Title }}</h1>
-            <div class="post-meta flex flex-row">
-                <span class="w-fit">{{ .WordCount }} words</span>
-                &nbsp;·&nbsp;
-                <span class="w-fit">{{ .ReadingTime }}</span>
-                &nbsp;·&nbsp;
-                <span class="w-fit flex-1">{{ .Date.Format "Jan 2, 2006" }}</span>
-                {{ if .Params.tags }}
-                <div class="tags flex flex-row">
-                    {{ range .Params.tags }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
-                    {{ end }}
+            <div class="post-meta md:flex md:flex-row">
+                    <div class="col md:flex-1">
+                        <span class="w-fit">{{ .WordCount }} words</span>
+                        &nbsp;·&nbsp;
+                        <span class="w-fit">{{ .ReadingTime }}</span>
+                        &nbsp;·&nbsp;
+                        <span class="w-fit">{{ .Date.Format "Jan 2, 2006" }}</span>
+                    </div>
+                    <div class="col">
+                        {{ if .Params.tags }}
+                        <div class="tags flex flex-row">
+                            {{ range .Params.tags }}
+                            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
                 </div>
-                {{ end }}
-            </div>
-                
             {{ .Content }}
             <div class="post-footer flex flex-row">
                 {{/*  tags  */}}

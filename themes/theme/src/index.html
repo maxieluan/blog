@@ -4,8 +4,7 @@
 <title>Maxie&#39;s Place</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -117,8 +116,7 @@ horizontal rules Footnotes Here&rsquo;s a...
 <title>Posts</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -235,8 +233,7 @@ horizontal rules Footnotes Here&rsquo;s a...
 <title>example page</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -342,7 +339,7 @@ horizontal rules Footnotes Here&rsquo;s a...
     <li><a href="#task-lists">Task Lists</a></li>
     <li><a href="#emoji">Emoji</a></li>
     <li><a href="#html">HTML</a></li>
-    <li><a href="#mathjax">MathJax</a></li>
+    <li><a href="#katex">Katex</a></li>
     <li><a href="#blockquote">blockquote</a></li>
     <li><a href="#list">list</a>
       <ul>
@@ -359,25 +356,28 @@ horizontal rules Footnotes Here&rsquo;s a...
         </aside>
         
         
-        <main class='main w-full lg:w-1/2   px-4 md:px-0'>
+        <main class='post w-full lg:w-1/2   px-4 md:px-0'>
             <h1>example page</h1>
-            <div class="post-meta flex flex-row">
-                <span class="w-fit">195 words</span>
-                &nbsp;·&nbsp;
-                <span class="w-fit">1</span>
-                &nbsp;·&nbsp;
-                <span class="w-fit flex-1">Jul 21, 2023</span>
-                
-                <div class="tags flex flex-row">
-                    
-                    <a href="/tags/tag1" class="tag">#tag1</a>
-                    
-                    <a href="/tags/tag2" class="tag">#tag2</a>
-                    
+            <div class="post-meta md:flex md:flex-row">
+                    <div class="col md:flex-1">
+                        <span class="w-fit">239 words</span>
+                        &nbsp;·&nbsp;
+                        <span class="w-fit">2</span>
+                        &nbsp;·&nbsp;
+                        <span class="w-fit">Jul 21, 2023</span>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="tags flex flex-row">
+                            
+                            <a href="/tags/tag1" class="tag">#tag1</a>
+                            
+                            <a href="/tags/tag2" class="tag">#tag2</a>
+                            
+                        </div>
+                        
+                    </div>
                 </div>
-                
-            </div>
-                
             <h2 id="headings">headings</h2>
 <h1 id="h1">h1</h1>
 <h2 id="h2">h2</h2>
@@ -418,8 +418,16 @@ Gone camping! :tent: Be back soon.</p>
 <p>That is so funny! :joy:</p>
 <h2 id="html">HTML</h2>
 <p>Not implemented yet. needs shortcode</p>
-<h2 id="mathjax">MathJax</h2>
-<p>Not implemented yet. needs shortcode</p>
+<h2 id="katex">Katex</h2>
+
+
+    <script src="/js/math.js" defer></script>
+    
+
+
+<div class="math w-full">
+    x^2 + y^2 = z^2
+</div>
 <h2 id="blockquote">blockquote</h2>
 <blockquote>
 <p>This is a blockquote following a header.</p>
@@ -476,16 +484,31 @@ Gone camping! :tent: Be back soon.</p>
 <tr>
 <th>Syntax</th>
 <th>Description</th>
+<th>Test Text</th>
+<th>Intentionally to test the line wrap.</th>
+<th>Another intentionally to test the line wrap.</th>
+<th>Yet another intentionally to test the line wrap.</th>
+<th>Averylongwordthatteststhelinebreak.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Header</td>
 <td>Title</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
 </tr>
 <tr>
 <td>Paragraph</td>
 <td>Text</td>
+<td>And more</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
+<td>Here&rsquo;s this</td>
 </tr>
 </tbody>
 </table>
@@ -520,8 +543,7 @@ Gone camping! :tent: Be back soon.</p>
 <title>Tags</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -590,8 +612,7 @@ Gone camping! :tent: Be back soon.</p>
 <title>tag1</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -660,8 +681,7 @@ Gone camping! :tent: Be back soon.</p>
 <title>Categories</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>
@@ -730,8 +750,7 @@ Gone camping! :tent: Be back soon.</p>
 <title>category1</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/second.css">
-<script src="/js/main.js" defer></script>
-<script src="/js/secondjs.js"></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
+<script src="/js/main.js" defer></script><body class="show-scrollbar"><nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="lg:w-1/2 md:w-3/4 w-full flex flex-row flex-wrap items-center justify-between mx-auto md:px-1 md:py-4 p-4">
         <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-menu" aria-expanded="false" id="btn-navbar">
             <span class="sr-only">Open main menu</span>

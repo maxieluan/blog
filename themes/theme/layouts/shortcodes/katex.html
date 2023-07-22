@@ -1,0 +1,9 @@
+{{ $math := .Get "math"}}
+{{ if not (.Page.Scratch.Get "katex") }}
+    <script src="/js/math.js" defer></script>
+    {{ .Page.Scratch.Set "katex" true }}
+{{ end }}
+
+<div class="math w-full">
+    {{ $math | safeHTML }}
+</div>
