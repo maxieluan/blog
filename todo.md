@@ -7,7 +7,7 @@
 -3. dynamic pagination
 ~~-4. Adjust toc~~
 ~~collapsable toc~~
-4.1 highlight current toc section
+~~4.1 highlight current toc section~~
 ~~-5. meta for posts~~
 ~~0.2. Language translation setup~~
 ~~0.5. Better h1, h2, ... p~~
@@ -26,7 +26,7 @@
 8. box
 9. icons
 10. math
-11. dynamic scrollbar
-12. aside sticky
+~~11. dynamic scrollbar~~
+~~12. aside sticky~~
 13. featured posts
 14. saperate style and layout. Style in css, not utility classes, easier to customize

@@ -146,7 +146,7 @@
     });
   });
 
-  window.addEventListener("scroll", () => {
+  function updateTocFloat() {
     const scrollPosition = window.scrollY;
     const toc = document.getElementById("toc");
     const main = document.querySelector("main");
@@ -159,23 +159,37 @@
     if (scrollPosition <= 48) {
         toc.classList.remove("float");
     }
-  });
+  }
 
-  window.addEventListener("scroll", () => {
+  function updateTocHighlight() {
     for (let i = 0; i < tocLinks.length; i++) {
-        section = document.getElementById(tocLinks[i].hash.slice(1));
-        nextSection = document.getElementById(tocLinks[i + 1]?.hash.slice(1));
+      section = document.getElementById(tocLinks[i].hash.slice(1));
+      nextSection = document.getElementById(tocLinks[i + 1]?.hash.slice(1));
 
-        if (section.getBoundingClientRect().top <= 48) {
-            if (nextSection?.getBoundingClientRect().top <= 48) {
-                tocLinks[i].classList.remove("active");
-                continue;
-            }
+      if (section.getBoundingClientRect().top <= 48) {
+          if (nextSection?.getBoundingClientRect().top <= 48) {
+              tocLinks[i].classList.remove("active");
+              continue;
+          }
 
-            tocLinks[i].classList.add("active");
-        } else {
-            tocLinks[i].classList.remove("active");
-        }
+          tocLinks[i].classList.add("active");
+      } else {
+          tocLinks[i].classList.remove("active");
+      }
+  }
+  }
+
+  let updatePending = false;
+  window.addEventListener("scroll", () => {
+    if (!updatePending) {
+      window.requestAnimationFrame(() => {
+        updateTocFloat();
+        updateTocHighlight();
+        updatePending = false;
+      });
+
+      updatePending = true;
     }
   });
+
 })();
