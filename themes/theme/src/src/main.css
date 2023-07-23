@@ -158,11 +158,6 @@ h1 {
         position: relative;
         margin: 0 auto;
     }
-
-    .single main.float {
-        position: relative;
-        margin: 0 auto;
-    }
 }
 
 
@@ -203,6 +198,11 @@ h1 {
     #toc>nav {
         margin: 0rem 0rem 1rem 0rem;
     }
+
+    #toc a.active {
+        /* underscore */
+        border-bottom: 2px solid var(--secondary-color);
+    } 
 }
 
 @media (max-width: 1023px) {

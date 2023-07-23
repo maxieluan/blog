@@ -3,6 +3,7 @@
   const btnNavbar = document.getElementById("btn-navbar");
   const menu = document.getElementById("navbar-menu");
   const btnTocCollapse = document.getElementById("toc-collapse");
+  const tocLinks = document.querySelectorAll("#toc a");
 
   language.addEventListener("change", (e) => {
     const newLanguage = e.target.value;
@@ -149,29 +150,32 @@
     const scrollPosition = window.scrollY;
     const toc = document.getElementById("toc");
     const main = document.querySelector("main");
+    const mainRect = main.getBoundingClientRect();
 
-    // if toc reaches top of screen, add class fixed
-    const tocPosition = toc.getBoundingClientRect().top;
-    console.log(tocPosition, scrollPosition);
-
-    if (tocPosition <= 5.9) {
+    if (scrollPosition >= mainRect.top) {
         toc.classList.add("float");
-        main.classList.add("float");
     }
 
     if (scrollPosition <= 48) {
         toc.classList.remove("float");
-        main.classList.remove("float");
     }
+  });
 
+  window.addEventListener("scroll", () => {
+    for (let i = 0; i < tocLinks.length; i++) {
+        section = document.getElementById(tocLinks[i].hash.slice(1));
+        nextSection = document.getElementById(tocLinks[i + 1]?.hash.slice(1));
 
+        if (section.getBoundingClientRect().top <= 48) {
+            if (nextSection?.getBoundingClientRect().top <= 48) {
+                tocLinks[i].classList.remove("active");
+                continue;
+            }
 
-    // if (scrollPosition >= tocPosition) {
-    //   toc.classList.add("float");
-    //   main.classList.add("float");
-    // } else {
-    //   toc.classList.remove("float");
-    //  main.classList.remove("float");
-    // }
+            tocLinks[i].classList.add("active");
+        } else {
+            tocLinks[i].classList.remove("active");
+        }
+    }
   });
 })();
