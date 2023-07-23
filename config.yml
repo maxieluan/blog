@@ -16,14 +16,22 @@ languages:
           name: Posts
           url: /posts/
           weight: 2
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 3
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 4
         - identifier: projects
           name: Projects
           url: /projects/
-          weight: 3
+          weight: 5
         - identifier: contact
           name: Contact
           url: /contact/
-          weight: 4
+          weight: 6
   zh:
     languageName: Chinese
     weight: 2
@@ -38,19 +46,28 @@ languages:
           name: 文章
           url: /zh/posts/
           weight: 2
-        - identifier: 项目
+        - identifier: tags
+          name: 标签
+          url: /zh/tags/
+          weight: 3
+        - identifier: categories
+          name: 分类
+          url: /zh/categories/
+          weight: 4
+        - identifier: projects
           name: 项目
           url: /zh/projects/
-          weight: 3
+          weight: 5
         - identifier: contact
           name: 联系
           url: /zh/contact/
-          weight: 4
+          weight: 6
 markup:
   tableOfContents:
     endLevel: 6
 Params:
   pagination:
     post: 10
-    tag: 10
+    taxonomy: 2
+    term: 2
  

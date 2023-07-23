@@ -4,7 +4,6 @@
 ~~1.1. responsive for main content~~
 ~~menu responsive sync with main content~~
 ~~-2. pagination~~
--3. dynamic pagination
 ~~-4. Adjust toc~~
 ~~collapsable toc~~
 ~~4.1 highlight current toc section~~
@@ -25,8 +24,11 @@
 7. tab
 8. box
 9. icons
-10. math
+~~10. math~~
 ~~11. dynamic scrollbar~~
 ~~12. aside sticky~~
+12.1. tags and categories
+12.2 search engine and SEO
+12.3 ads.
 13. featured posts
 14. saperate style and layout. Style in css, not utility classes, easier to customize

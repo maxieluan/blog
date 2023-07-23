@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class='main w-full mx-auto md:w-3/4 lg:w-1/2 h-screen-minus-header px-4 md:px-0'>
+
+  <h1>{{ .Title }}</h1>
+  <ul class="terms tax-list">
+    {{ $paginator := .Paginate .Data.Pages .Site.Params.Pagination.Taxonomy }}
+    {{ range $paginator.Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+
+  </ul>
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination">
+        {{/*  {{ template "_internal/pagination.html" . }}  */}}
+        {{ partial "pagination.html" . }}
+    </nav>
+  {{ end }} 
+</main>
+{{ end }}

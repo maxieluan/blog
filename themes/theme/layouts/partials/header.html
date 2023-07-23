@@ -15,7 +15,7 @@
         <span id="currentLang" hidden>{{ $currentLanguage }}</span>
         {{ $currentUrl := .Page.RelPermalink }}
         <div class="menu-hide w-full menu-display md:w-auto order-2 md:order-1" id="navbar-menu">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-4 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 {{ range .Site.Menus.main }}
 
                 {{ if eq .URL $currentUrl }}

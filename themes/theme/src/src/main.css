@@ -4,9 +4,9 @@
 
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(27, 147, 245);
+    --secondary-color: rgb(27, 121, 245);
     --tertiary-color: #38b142;
-    --link-color: #4891fd;
+    --link-color: #ac48fd;
     --button-color: #4891fd;
     --heading-margin: 1rem;
 }
@@ -246,11 +246,15 @@ h1 {
 }
 
 .h-screen-minus-header {
-    min-height: calc(100vh - 5.5rem);
+    min-height: calc(100vh - 6rem);
 }
 
 .content-list {
     min-height: calc(100vh - 10rem);
+}
+
+.tax-list {
+    min-height: calc(100vh - 11rem);
 }
 
 /* Set the scrollbar to be always visible with custom styling */
@@ -363,9 +367,27 @@ nav.pagination ul li {
 }
 
 .post-meta a {
-    color: var(--link-color);
     display: block;
     margin-right: 0.5rem;
+}
+
+.post-meta div:first-child {
+    display: flex;
+}
+
+.post-meta span {
+    display: flex;
+}
+
+.post-meta span:not(:last-child) {
+    margin-right: 0.3rem;
+}
+
+.post-meta svg {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.23rem;
+    color: var(--secondary-color);
 }
 
 .post-footer {
@@ -456,7 +478,7 @@ table td {
 }
 
 main.post a {
-    color: #4891fd;
+    color: var(--link-color);
 }
 
 /* 
