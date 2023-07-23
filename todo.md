@@ -27,7 +27,7 @@
 ~~10. math~~
 ~~11. dynamic scrollbar~~
 ~~12. aside sticky~~
-12.1. tags and categories
+~~12.1. tags and categories~~
 12.2 search engine and SEO
 12.3 ads.
 13. featured posts
