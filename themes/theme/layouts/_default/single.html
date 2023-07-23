@@ -1,5 +1,5 @@
 {{- define "main" -}}
-    <div class="flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto h-screen-minus-header">
+    <div class="single flex flex-col lg:flex-row lg:w-full md:w-3/4 mx-auto h-screen-minus-header">
         {{ $toc := (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")}}
         {{ if $toc }}
         <aside id="toc" class="w-full lg:w-1/4">
@@ -19,7 +19,7 @@
         </aside>
         {{ end }}
         
-        <main class='post w-full lg:w-1/2 {{if not $toc}}mx-auto {{end}} {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
+        <main class='post w-full lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
             <h1>{{ .Title }}</h1>
             <div class="post-meta md:flex md:flex-row">
                     <div class="col md:flex-1">

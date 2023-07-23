@@ -144,4 +144,34 @@
       heading.insertBefore(anchor, heading.firstChild);
     });
   });
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const toc = document.getElementById("toc");
+    const main = document.querySelector("main");
+
+    // if toc reaches top of screen, add class fixed
+    const tocPosition = toc.getBoundingClientRect().top;
+    console.log(tocPosition, scrollPosition);
+
+    if (tocPosition <= 5.9) {
+        toc.classList.add("float");
+        main.classList.add("float");
+    }
+
+    if (scrollPosition <= 48) {
+        toc.classList.remove("float");
+        main.classList.remove("float");
+    }
+
+
+
+    // if (scrollPosition >= tocPosition) {
+    //   toc.classList.add("float");
+    //   main.classList.add("float");
+    // } else {
+    //   toc.classList.remove("float");
+    //  main.classList.remove("float");
+    // }
+  });
 })();

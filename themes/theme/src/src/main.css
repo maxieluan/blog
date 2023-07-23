@@ -42,11 +42,21 @@ h6 {
     margin: var(--heading-margin) 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply flex;
 }
 
-h1 svg, h2 svg, h3 svg, h4 svg, h5 svg, h6 svg {
+h1 svg,
+h2 svg,
+h3 svg,
+h4 svg,
+h5 svg,
+h6 svg {
     color: var(--tertiary-color);
 }
 
@@ -129,6 +139,32 @@ h1 {
     word-break: break-word;
     overflow: auto;
 }
+
+@media (min-width: 1024px) {
+    .single {
+        position: relative;
+    }
+
+    aside {
+        position: absolute;
+    }
+
+    aside.float {
+        position: fixed;
+        top: 0px 
+    }
+
+    .single main {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .single main.float {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
 
 #toc nav {
     border: 1px solid #ccc;
