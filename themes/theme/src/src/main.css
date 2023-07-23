@@ -8,37 +8,38 @@
     --tertiary-color: #38b142;
     --link-color: #4891fd;
     --button-color: #4891fd;
+    --heading-margin: 1rem;
 }
 
 /* headings */
 h1 {
     @apply text-4xl;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h2 {
     @apply text-3xl;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h3 {
     @apply text-2xl;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h4 {
     @apply text-xl;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h5 {
     @apply text-lg;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h6 {
     @apply text-base;
-    margin: 0.5rem 0;
+    margin: var(--heading-margin) 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,7 +144,6 @@ h1 {
 
 #toc-collapse button {
     display: flex;
-    justify-content: start;
 }
 
 #toc-collapse button span {
@@ -437,4 +437,5 @@ main>ol {
 
 .math {
     font-size: 1.5rem;
+    overflow-x: auto;
 }

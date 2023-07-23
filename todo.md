@@ -14,10 +14,11 @@
 ~~0.6. List style, title left, date right, dot lines in between~~
 ~~0.7. i18n title~~
 ~~0.75. example pages~~
-0.8. default markdown style
+~~0.8. default markdown style~~
 ~~2. code highlight style and copy button~~
 ~~2.5 list~~
 ~~3. table~~
+~~multiple libraries and naming collison resolution~~
 4. image gallery
 5. file download
 6. column

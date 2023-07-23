@@ -4,17 +4,9 @@
     <h1>{{ i18n .Section }}</h1>
     {{ if .IsHome }}
 
-        {{ range .Sections }}
-            <h2>{{ i18n .Section }}</h2>
-            {{ range .Pages }}
-                <div class="post">
-                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                    <div class="summary">
-                        {{ .Summary | truncate 200 "..."}}
-                    </div>
-                </div>
-            {{ end }}
-        {{ end }}
+        <h1>
+            {{ i18n "welcome_message" }}
+        </h1>
 
     {{ else if .IsSection }}
         {{/*  {{ if .IsSection }}
@@ -29,7 +21,7 @@
                 <h2>{{ .Key }}</h2>
                 {{ range .Pages }}
                     <div class="post flex-row flex flex-1">
-                        <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                        <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                         <div class="dot-line"></div>
                         <span class="my-auto">{{ .Date.Format "Jan 2, 2006" }}</span>
                     </div>
