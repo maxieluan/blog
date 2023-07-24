@@ -1,0 +1,3 @@
+[submodule "themes/Simplico"]
+	path = themes/Simplico
+	url = git@github.com:maxieluan/Simplico.git
