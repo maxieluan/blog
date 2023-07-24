@@ -251,7 +251,7 @@
         resolve();
         
       animations[currentIdx]();
-      }, 1000);
+      }, 500);
     });
   }
 
