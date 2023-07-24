@@ -239,7 +239,16 @@
     let section = sections[currentIdx];
     let currentPos = prev.getBoundingClientRect().top;
     let targetPos = section.getBoundingClientRect().top;
+
+    if (currentIdx === 0) {
+      document.body.getBoundingClientRect().top;
+    }
+
     let distance = targetPos - currentPos;
+
+    section.querySelectorAll("li").forEach((li) => {
+      li.classList.remove("fade-in-from-side");
+    });
 
     // scroll window 'distance' pixels
     return new Promise((resolve) => {
