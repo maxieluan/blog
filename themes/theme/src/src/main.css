@@ -504,7 +504,7 @@ main div.home ul {
 }
 
 main div.home ul li {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     opacity: 0;
 }
 
@@ -514,7 +514,7 @@ main .featured ul {
 }
 
 main .featured ul li {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     opacity: 0;
 }
 
