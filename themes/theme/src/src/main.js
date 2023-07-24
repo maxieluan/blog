@@ -5,6 +5,9 @@
   const btnTocCollapse = document.getElementById("toc-collapse");
   const toc = document.getElementById("toc");
   const tocLinks = document.querySelectorAll("#toc a");
+  const sections = [];
+  const homeDiv = document.querySelector("main .home");
+  const featuredDiv = document.querySelector(".featured");
 
   language.addEventListener("change", (e) => {
     const newLanguage = e.target.value;
@@ -172,10 +175,10 @@
 
   function updateTocHighlight() {
     for (let i = 0; i < tocLinks.length; i++) {
-      section = document.getElementById(
+      let section = document.getElementById(
         tocLinks[i].attributes.href.value.slice(1)
       );
-      nextSection = document.getElementById(
+      let nextSection = document.getElementById(
         tocLinks[i + 1]?.attributes.href.value.slice(1)
       );
 
@@ -197,9 +200,7 @@
   }
 
   function homePageHeIsAnimation() {
-    const mainhome = document.querySelector("main .home");
-
-    const home_lis = mainhome.querySelectorAll("li");
+    const home_lis = homeDiv.querySelectorAll("li");
 
     function liFadeInFromSide(li) {
       li.classList.add("fade-in-from-side");
@@ -213,15 +214,14 @@
     }
   }
 
-  function homePageAnimationScroll() {
-    const featured = document.querySelector(".featured");
-    const featured_lis = featured.querySelectorAll("li");
+  function featuredAnimation() {
+    const featured_lis = featuredDiv.querySelectorAll("li");
 
     let eightyPercent = window.innerHeight * 0.8;
     function liFadeInFromSide(li) {
       li.classList.add("fade-in-from-side");
     }
-    if (featured.getBoundingClientRect().top <= eightyPercent) {
+    if (featuredDiv.getBoundingClientRect().top <= eightyPercent) {
       featured_lis.forEach((li) => {
         featured_lis.forEach((li, idx) => {
           setTimeout(() => {
@@ -232,30 +232,75 @@
     }
   }
 
-  let scrollEvents = [];
-  if (toc !== null) {
-    scrollEvents.push(updateTocFloat);
-    scrollEvents.push(updateTocHighlight);
-  }
+  let animations = [homePageHeIsAnimation, featuredAnimation]
 
-  console.log(document.querySelector("main .home"));
-  if (document.querySelector("main .home") !== null) {
-    homePageHeIsAnimation();
-    scrollEvents.push(homePageAnimationScroll);
+  function scrollToSection(prevIdx, currentIdx) {
+    let prev = sections[prevIdx];
+    let section = sections[currentIdx];
+    let currentPos = prev.getBoundingClientRect().top;
+    let targetPos = section.getBoundingClientRect().top;
+    let distance = targetPos - currentPos;
+
+    // scroll window 'distance' pixels
+    return new Promise((resolve) => {
+      window.scrollBy({
+        top: distance,
+        behavior: "smooth",
+      });
+      setTimeout(() => {
+        resolve();
+        
+      animations[currentIdx]();
+      }, 1000);
+    });
   }
 
   let updatePending = false;
-
-  window.addEventListener("scroll", () => {
-    if (!updatePending) {
-      window.requestAnimationFrame(() => {
-        scrollEvents.forEach((scrollEvent) => {
-          scrollEvent();
+  if (toc !== null) {
+    window.addEventListener("scroll", () => {
+      if (!updatePending) {
+        window.requestAnimationFrame(() => {
+          updateTocFloat();
+          updateTocHighlight();
         });
-        updatePending = false;
-      });
+  
+        updatePending = true;
+      }
+    });
+  }
 
-      updatePending = true;
+  let scrolling = false;
+  if (homeDiv !== null) {
+    let currentSection = 0;
+    homePageHeIsAnimation();
+    sections.push(homeDiv);
+    sections.push(featuredDiv);
+    const target = document.querySelector("main");
+
+    function handleScroll(e) {
+        // prevent default scroll
+        e.preventDefault();
+  
+        if (!scrolling) {
+          let prevIdx = currentSection;
+          scrolling = true;
+          currentSection += 1;
+          if (currentSection >= sections.length) {
+            currentSection = 0;
+          }
+          Promise.all([
+            scrollToSection(prevIdx, currentSection)
+          ]).then(() => {
+            scrolling = false;
+          })
+        }
+  
     }
-  });
+
+    target.addEventListener("wheel", handleScroll);
+    target.addEventListener("scroll", (e) => {
+      e.preventDefault();
+    });
+    target.addEventListener("touchmove", handleScroll);
+  }
 })();
