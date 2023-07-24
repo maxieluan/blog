@@ -29,7 +29,7 @@
             
             <main class='post w-full lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} px-4 md:px-0'>
                 <h1>{{ .Title }}</h1>
-                {{ if .Params.meta }}
+                {{ if not .Params.nometa }}
                     <div class="post-meta md:flex md:flex-row">
                         <div class="col md:flex-1">
                             <span class="w-fit">

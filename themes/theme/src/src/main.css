@@ -518,6 +518,10 @@ main .featured ul li {
     opacity: 0;
 }
 
+main .featured a {
+    color: var(--link-color);
+}
+
 div.home {
     height: calc(100vh - 5rem);
 }
@@ -531,6 +535,7 @@ li.fade-in-from-side {
     transform: translateX(-1rem);
     animation: fade-in-from-side 0.5s ease-out forwards;
 }
+
 
 @keyframes fade-in-from-side {
     from {
