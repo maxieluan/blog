@@ -5,6 +5,9 @@ draft: false
 tags: ["标签3", "标签2"]
 categories: ["目录3", "目录2"]
 description: "这是第三篇文章。"
+featured: 
+  flag: true
+  weight: 5
 ---
 ## 這綠瓜
 

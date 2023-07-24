@@ -5,6 +5,9 @@ draft: false
 tags: ["tag1", "tag2"]
 categories: ["category1", "category2"]
 description: "This is the first post."
+featured: 
+  flag: true
+  weight: 2
 ---
 ## Section 1
 

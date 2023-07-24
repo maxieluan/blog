@@ -5,6 +5,9 @@ draft: false
 tags: ["tag1", "tag3"]
 categories: ["category1", "category3"]
 description: "This is the second post."
+featured: 
+  flag: true
+  weight: 4
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra vitae ex ut aliquet. Aliquam malesuada bibendum semper. Vestibulum vitae velit non ante molestie ultrices. Morbi a mollis metus, vitae finibus ex. Aliquam posuere ullamcorper finibus. Duis vitae lectus at mi dapibus imperdiet. Nam dapibus est nec condimentum placerat. Curabitur placerat leo ex. Nulla facilisi. Fusce a massa id urna vehicula aliquam. Integer malesuada dui a magna luctus, sed cursus ligula pellentesque. Maecenas commodo sodales laoreet. Praesent vel vehicula libero. Nullam fermentum suscipit leo, ut dictum nisl cursus vel. Sed porta ligula eu ipsum sagittis, a viverra leo vulputate.
 

@@ -32,6 +32,18 @@ languages:
           name: Contact
           url: /contact/
           weight: 6
+    welcome_message: "Meet Max"
+    he_is: 
+      - "Design Aficionado"
+      - "Code Wrangler"
+      - "Data Explorer"
+      - "Cinema Lover"
+      - "Bilingual Speaker (English & Cantonese)"
+      - "Tech Geek"
+      - "Curious Mind"
+      - "Mathematics and Finance Enthusiast"
+      - "Polylgot Programmer"
+    
   zh:
     languageName: Chinese
     weight: 2
@@ -62,12 +74,30 @@ languages:
           name: 联系
           url: /zh/contact/
           weight: 6
+    welcome_message: "见见麦克嘻"
+    he_is: 
+      - "设计外行"
+      - "编码狂人"
+      - "数据探索"
+      - "热爱电影"
+      - "双语 (英语 & 粤语)"
+      - "科技迷"
+      - "好奇心旺盛"
+      - "数学和金融业余爱好者"
+      - "多技术栈程序员"
 markup:
   tableOfContents:
     endLevel: 6
+
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
+
 Params:
   pagination:
     post: 10
     taxonomy: 2
     term: 2
+  number_of_featured: 6
  

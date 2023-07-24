@@ -1,12 +1,33 @@
 {{- define "main" -}}
 
 <main class='main w-full mx-auto md:w-3/4 lg:w-1/2 {{if eq .Site.Language.Lang "zh"}}chinese-text{{end}} h-screen-minus-header px-4 md:px-0'>
-    <h1>{{ i18n .Section }}</h1>
     {{ if .IsHome }}
-
-        <h1>
-            {{ i18n "welcome_message" }}
-        </h1>
+        <div class="home">
+            <h1>
+                {{ .Site.Params.welcome_message }}
+            </h1>
+            <ul>
+                {{ range .Site.Params.he_is }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ $featured := where .Site.RegularPages  "Params.featured.flag" "=" true }}
+        {{ if gt (len $featured) 0 }}
+        <div class="featured">
+            <h1>
+                {{ i18n "featured" }}
+            </h1>
+            {{ range first .Site.Params.number_of_featured (sort $featured "Params.featured.weight" "desc")}}
+            
+            <ul>
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            </ul>
+            {{ end }}
+        </div>
+        {{ end }}
 
     {{ else if .IsSection }}
         {{/*  {{ if .IsSection }}

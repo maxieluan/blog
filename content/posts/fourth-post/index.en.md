@@ -5,6 +5,9 @@ draft: false
 tags: ["tag4", "tag3"]
 categories: ["category4", "category2"]
 description: "This is the 4th post."
+featured: 
+  flag: true
+  weight: 3
 ---
 ## Section 1
 

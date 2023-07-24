@@ -5,6 +5,9 @@ draft: false
 tags: ["标签1", "标签2"]
 categories: ["目录1", "目录2"]
 description: "这是第一篇文章。"
+featured: 
+  flag: true
+  weight: 2
 ---
 ## 這綠瓜
 

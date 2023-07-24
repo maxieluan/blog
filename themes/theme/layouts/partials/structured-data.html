@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ .Title }}",
+      "description": "{{ .Description }}",
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z" }}",
+      "author": {
+          "@type": "Person",
+          "name": "{{ .Params.author }}"
+      },
+      {{ if .Params.Keywords }}
+      "keywords": "{{ delimit .Params.keywords ", " }}"
+      {{ end }}
+  }
+</script>

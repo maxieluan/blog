@@ -3,6 +3,7 @@
   const btnNavbar = document.getElementById("btn-navbar");
   const menu = document.getElementById("navbar-menu");
   const btnTocCollapse = document.getElementById("toc-collapse");
+  const toc = document.getElementById("toc");
   const tocLinks = document.querySelectorAll("#toc a");
 
   language.addEventListener("change", (e) => {
@@ -77,16 +78,21 @@
   //     }
   // });
 
-  btnTocCollapse.addEventListener("click", () => {
-    const toc = document.getElementById("TableOfContents");
-    toc.classList.toggle("small-hidden");
-    // find by selector, btnTocCollapse > span
-    const btnTocCollapseSpan = btnTocCollapse.querySelectorAll("span");
-    // span toggle hidden
-    btnTocCollapseSpan.forEach((span) => {
-      span.classList.toggle("hidden");
+  if (btnTocCollapse) {
+    btnTocCollapse.addEventListener("click", () => {
+      const toc = document.getElementById("TableOfContents");
+      if (!toc) {
+        return;
+      }
+      toc.classList.toggle("small-hidden");
+      // find by selector, btnTocCollapse > span
+      const btnTocCollapseSpan = btnTocCollapse.querySelectorAll("span");
+      // span toggle hidden
+      btnTocCollapseSpan.forEach((span) => {
+        span.classList.toggle("hidden");
+      });
     });
-  });
+  }
 
   document.addEventListener("DOMContentLoaded", () => {
     const preBlocks = document.querySelectorAll("pre");
@@ -135,7 +141,11 @@
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const headings = document.querySelectorAll("h2, h3, h4, h5, h6");
+    const postMain = document.querySelector("main.post");
+    if (!postMain) {
+      return;
+    }
+    const headings = postMain.querySelectorAll("h2, h3, h4, h5, h6");
     headings.forEach((heading) => {
       const anchor = document.createElement("a");
       anchor.className = "anchor";
@@ -148,48 +158,104 @@
 
   function updateTocFloat() {
     const scrollPosition = window.scrollY;
-    const toc = document.getElementById("toc");
     const main = document.querySelector("main");
     const mainRect = main.getBoundingClientRect();
 
     if (scrollPosition >= mainRect.top) {
-        toc.classList.add("float");
+      toc.classList.add("float");
     }
 
     if (scrollPosition <= 48) {
-        toc.classList.remove("float");
+      toc.classList.remove("float");
     }
   }
 
   function updateTocHighlight() {
     for (let i = 0; i < tocLinks.length; i++) {
-      section = document.getElementById(tocLinks[i].hash.slice(1));
-      nextSection = document.getElementById(tocLinks[i + 1]?.hash.slice(1));
+      section = document.getElementById(
+        tocLinks[i].attributes.href.value.slice(1)
+      );
+      nextSection = document.getElementById(
+        tocLinks[i + 1]?.attributes.href.value.slice(1)
+      );
 
-      if (section.getBoundingClientRect().top <= 48) {
-          if (nextSection?.getBoundingClientRect().top <= 48) {
-              tocLinks[i].classList.remove("active");
-              continue;
-          }
-
-          tocLinks[i].classList.add("active");
-      } else {
-          tocLinks[i].classList.remove("active");
+      if (!section || !nextSection) {
+        continue;
       }
+
+      if (section.getBoundingClientRect().top <= 0) {
+        if (nextSection?.getBoundingClientRect().top <= 0) {
+          tocLinks[i].classList.remove("active");
+          continue;
+        }
+
+        tocLinks[i].classList.add("active");
+      } else {
+        tocLinks[i].classList.remove("active");
+      }
+    }
   }
+
+  function homePageHeIsAnimation() {
+    const mainhome = document.querySelector("main .home");
+
+    const home_lis = mainhome.querySelectorAll("li");
+
+    function liFadeInFromSide(li) {
+      li.classList.add("fade-in-from-side");
+    }
+    if (home_lis.length > 0) {
+      home_lis.forEach((li, idx) => {
+        setTimeout(() => {
+          liFadeInFromSide(li);
+        }, 100 * idx);
+      });
+    }
+  }
+
+  function homePageAnimationScroll() {
+    const featured = document.querySelector(".featured");
+    const featured_lis = featured.querySelectorAll("li");
+
+    let eightyPercent = window.innerHeight * 0.8;
+    function liFadeInFromSide(li) {
+      li.classList.add("fade-in-from-side");
+    }
+    if (featured.getBoundingClientRect().top <= eightyPercent) {
+      featured_lis.forEach((li) => {
+        featured_lis.forEach((li, idx) => {
+          setTimeout(() => {
+            liFadeInFromSide(li);
+          }, 100 * idx);
+        });
+      });
+    }
+  }
+
+  let scrollEvents = [];
+  if (toc !== null) {
+    scrollEvents.push(updateTocFloat);
+    scrollEvents.push(updateTocHighlight);
+  }
+
+  console.log(document.querySelector("main .home"));
+  if (document.querySelector("main .home") !== null) {
+    homePageHeIsAnimation();
+    scrollEvents.push(homePageAnimationScroll);
   }
 
   let updatePending = false;
+
   window.addEventListener("scroll", () => {
     if (!updatePending) {
       window.requestAnimationFrame(() => {
-        updateTocFloat();
-        updateTocHighlight();
+        scrollEvents.forEach((scrollEvent) => {
+          scrollEvent();
+        });
         updatePending = false;
       });
 
       updatePending = true;
     }
   });
-
 })();

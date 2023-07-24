@@ -5,6 +5,11 @@ draft: false
 tags: ["tag1", "tag2"]
 categories: ["category1", "category2"]
 description: "This is the first post."
+author: "Max"
+keywords: ["keyword1", "keyword2"]
+featured: 
+  flag: true
+  weight: 1
 ---
 ## headings
 # h1
