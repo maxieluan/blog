@@ -278,6 +278,9 @@
     const target = document.querySelector("main");
 
     function handleScroll(e) {
+      if (!menu.classList.contains("menu-hide")) {
+        btnNavbar.click();
+      }
         // prevent default scroll
         e.preventDefault();
   
