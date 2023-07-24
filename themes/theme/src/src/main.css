@@ -522,6 +522,10 @@ div.home {
     height: calc(100vh - 5rem);
 }
 
+div.featured {
+    height: calc(100vh - 5rem);
+}
+
 li.fade-in-from-side {
     opacity: 0;
     transform: translateX(-1rem);
