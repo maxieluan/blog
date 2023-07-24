@@ -241,7 +241,7 @@
     let targetPos = section.getBoundingClientRect().top;
 
     if (currentIdx === 0) {
-      document.body.getBoundingClientRect().top;
+      targetPos = document.body.getBoundingClientRect().top;
     }
 
     let distance = targetPos - currentPos;
