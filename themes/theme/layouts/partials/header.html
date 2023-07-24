@@ -9,7 +9,7 @@
         {{ $currentLanguage := .Site.Language.Lang }}
         <select id="lang" title="language" class="order-1 md:order-2">
         {{ range .Site.Languages }}
-            <option value="{{.Lang}}" {{ if eq .Lang $currentLanguage}} selected {{end}} >{{.Lang}}</option>
+            <option value="{{.Lang}}" {{ if eq .Lang $currentLanguage}} selected {{end}} >{{T .Lang}}</option>
         {{ end }}
         </select>
         <span id="currentLang" hidden>{{ $currentLanguage }}</span>

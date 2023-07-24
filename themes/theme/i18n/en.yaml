@@ -12,6 +12,12 @@ last: "Last"
 collapse: "Collapse"
 expand: "Expand"
 
+Tags: "Tags"
+Categories: "Categories"
+
 featured: "Featured"
 
 message_not_found: "Page not found"
+
+zh: "Chinese"
+en: "English"

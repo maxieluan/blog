@@ -12,6 +12,12 @@ last: "尾页"
 collapse: "收起"
 expand: "展开"
 
+Tags: "标签"
+Categories: "分类"
+
 featured: "精选"
 
 message_not_found: "页面未找到"
+
+zh: "中文"
+en: "英文"
