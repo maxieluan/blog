@@ -1,6 +1,6 @@
 baseURL: "http://maxieluan.xyz/"
 languageCode: en-us
-theme: theme
+theme: Simplico
 languages:
   en:
     languageName: English
