@@ -2,11 +2,11 @@
 title: "示例页面"
 date: 2023-07-21T02:18:23+08:00
 draft: false
-tags: ["标签1", "标签2"]
-categories: ["目录1", "目录2"]
-description: "This is the first post."
-author: "作者"
-keywords: ["关键词1", "关键词2"]
+tags: ["markdown", "Simplico", "前端"]
+categories: ["hugo 主题"]
+description: "这是一篇示例文章。"
+author: "Max"
+keywords: ["Simplico", "Hugo", "主题"]
 featured: 
   flag: true
   weight: 1

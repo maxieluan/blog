@@ -1,12 +1,12 @@
 ---
-title: "example page"
+title: "Example Page"
 date: 2023-07-21T02:18:23+08:00
 draft: false
-tags: ["tag1", "tag2"]
-categories: ["category1", "category2"]
-description: "This is the first post."
+tags: ["markdown", "Simplico", "frontend"]
+categories: ["hugo theme"]
+description: "This is an example post."
 author: "Max"
-keywords: ["keyword1", "keyword2"]
+keywords: ["Simplico", "Hugo", "theme"]
 featured: 
   flag: true
   weight: 1

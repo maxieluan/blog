@@ -5,3 +5,5 @@ draft: false
 description: "A list of projects I've made"
 nometa: true
 ---
+* [Simplico](https://github.com/maxieluan/Simplico):
+    * A simple and minimalistic Hugo theme for bloggers

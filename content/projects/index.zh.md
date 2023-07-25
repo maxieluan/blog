@@ -5,3 +5,5 @@ draft: false
 description: "我做过的项目"
 nometa: true
 ---
+* [Simplico](https://github.com/maxieluan/Simplico):
+    * 一个简单的，极简的Hugo主题
