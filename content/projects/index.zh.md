@@ -8,3 +8,7 @@ nometa: true
 * [Simplico](https://github.com/maxieluan/Simplico):
     * 一个简单的，极简的Hugo主题
 * [电梯模拟 (项目进行中)](https://elevator-sim.pages.dev/)
+* [canvas动画主页背景](https://anim-canvas-demo.pages.dev/)
+    * 黑客帝国
+    * 球体碰撞
+    * 粒子网
