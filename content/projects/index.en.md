@@ -8,7 +8,7 @@ nometa: true
 * [Simplico](https://github.com/maxieluan/Simplico):
     * A simple and minimalistic Hugo theme for bloggers
 * [Elevator Simulation (work in progress)](https://elevator-sim.pages.dev/)
-* [canvas animation homepage background](https://anim-canvas-demo.pages.dev/)
+* [canvas animation homepage background (Not optimized for mobile, sorry)](https://anim-canvas-demo.pages.dev/)
     * Matrix
     * Sphere collision
     * Particle Web
