@@ -3,7 +3,7 @@ title: "Java, Node and golang，某种概览"
 date: 2023-07-29T01:25:32+08:00
 draft: false
 tags: ["node.js", "golang", "java"]
-categories: ["Technology Overview"]
+categories: ["技术总览"]
 description: "这是一篇从一个外行视角，对Java, Node.js, golang的看法和比较。"
 author: "Max"
 keywords: ["Java", "Node.js", "golang", "并发模型"]
