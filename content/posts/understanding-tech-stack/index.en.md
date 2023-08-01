@@ -61,7 +61,7 @@ Golang uses a concept called goroutine to handle concurrency. A goroutine is a l
 Golang, being a statically typed language, is also compiled into machine code, which is more efficient than Java's bytecode. It also has a garbage collector that manages memory automatically, which is similar to Java. It offers a exceptional performance in handling CPU intensive tasks, sometimes as good as C or C++. 
 
 ## Why don't we use it in every project?
-###
+### Golang
 Golang's speed, efficiency, and performance leads one to wonder why it's not the go-to language for every project. While golang is possess many advantages, there are also considerations that may deter developers from adopting it.
 
 One is that, the language is its complexity. Unlike some other languages, Golang requires to manage goroutines and syncronization manually. It doesn't have generics or exceptions. The arrays are fixed length. That means the developer needs to manually manage its size. These are the byproduct of its performance. It's a double edged sword. 
