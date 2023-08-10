@@ -10,55 +10,54 @@ keywords: ["superconducting", "LK-99"]
 featured: 
   flag: true
   weight: 1
-draft: true
 ---
 ## Introduction
-Recently, a team from South Korea published a paper on arxiv about a room temperature superconducting material called LK-99. They claim this material can be produced using pretty ordinary lab methods, no special equipment is needed. The paper is not peer reviewed. 
+Recently, a team based in South Korea released an arXiv paper detailing a purported room temperature superconducting material named LK-99. The researchers claim that this material can be synthesized using conventional laboratory methods without the need for specialized equipment. It's important to note that this paper has not undergone the peer review process.
 
-This paper caused a lot of hype in the media. It's understandable, in the context of 2023. This is a year which people would refer to as tech singlarity. In this year, there is significant breakthroughs in AI, bring us one step seemingly closing to AGI. At this point, any other breakthroughs in science would seem perfectly believed. 
+The publication of this paper has sparked significant excitement within the media. This enthusiasm is particularly comprehensible within the context of the year 2023, a time often referred to as the "tech singularity." During this era, notable advancements in AI have propelled us closer to the concept of Artificial General Intelligence (AGI). Given these advancements, it is perhaps natural for breakthroughs in other scientific fields to be embraced with great anticipation.
 
-I am not from material science background. So, I didn't jump on the hype train. I observed the hype, and I am curious about the science behind it. This is not supposed to be a scientific article. It's just something I never knew before. I would like also provide some of my opinions about the hype. 
+Not hailing from a background in materials science, I opted not to hastily board the hype train. Rather, I observed the fervor with curiosity and found myself compelled to delve into the scientific underpinnings of the matter. While I don't intend for this to be an extensively scientific article, I aim to share insights I've gathered on a topic previously unfamiliar to me. Moreover, I hope to offer some personal reflections on the prevalent hype surrounding this development.
 
-## Superconductivity basics
-As the name suggests, superconductivity is a phenomenon that a material can conduct electricity without resistance. This is a very useful property. It can be used in power transmission, MRI, particle accelerator, etc. 
+## Superconductivity Basics
+As the name suggests, superconductivity refers to the unique property of certain materials to conduct electricity without any resistance. This remarkable trait holds significant practical value and finds applications in fields such as power transmission, MRI technology, and particle accelerators.
 
-But that basically sums up all my understanding of superconductivity. The article from South Korea comes with a photo, in which a very small piece of LK-99 is levitating above a magnet. This is the reason people are excited. I cannot understand it. 
+However, that encapsulates the extent of my familiarity with the subject. The article from South Korea also comes with an image in which a small fragment of LK-99 hovers above a magnet. This image is responsible for the widespread excitement. Regrettably, I don't understand it. 
 
-I am not saying I don't understand magnetic levitation. In China, magnetic levitation trains have been operational for many years. I was on one of them once. I understand the basic principle of magnetic levitation. But I don't understand how it relates to superconductivity. I certainly don't understand how a levitation photo can prove superconductivity.
+Allow me to clarify; it's not that I'm unfamiliar with magnetic levitation. China has long operated magnetic levitation trains, an experience I've personally encountered. I grasp the foundational principles behind magnetic levitation. What eludes me is the connection between this concept and superconductivity. The leap from a levitating object to substantiating claims of superconductivity is not obvious to me.
 
-From some of the concepts I learn at school, superconductors doesn't have resistance. So, if you apply some current to it, it will keep flowing forever. I think that means, with very little energy, you can create perminant magnetic field. That's why it can levitate. But, doesn't that require the material to be shaped in a looped form? How can a small piece of material levitate if it's not a closed circuit?
+Drawing from my school education, I understand that superconductors lack electrical resistance. Consequently, if a current is introduced into a superconductor, it would persist indefinitely. This seemingly implies that, with minimal energy input, a perpetual magnetic field could be generated, enabling levitation. However, my confusion arises—does this require the material to be in a looped structure? How can a small segment of material achieve levitation if it isn't a closed circuit form?
 
-## diamagnetism
-This brings the concept of diamagnetism. Diamagnetism is a property of all materials, which is the ability to repel magnetic field. This is different from paramagnetism and ferromagnetism. Paramagnetism is the ability to attract magnetic field. Ferromagnetism is the ability to attract magnetic field and keep it. The latter two are what we usually refer to as magnet. Bue diamagnetism is a property of all materials.
+## Diamagnetism
+This brings us to the concept of diamagnetism. Diamagnetism is an inherent property of all materials—a capacity to repel magnetic fields. It's important to differentiate this phenomenon from paramagnetism and ferromagnetism. Paramagnetism involves the propensity to attract magnetic fields, while ferromagnetism entails the capacity to attract and retain magnetic fields. The latter two are often associated with what we normally call magnets. However, diamagnetism is a universal property of all materials, including those we don't typically consider magnetic.
 
-### How does diamagnetism work?
-I suspected that diamagnetism is a result of induced current. As we have learned by Faraday's law, a changing magnetic field will induce a current. So, if a material is approaching a magnet, the magnetic field is changing. So, it will induce a current in the material. The current will create a magnetic field that is opposite to the magnet. So, it will repel the magnet. 
+### How Diamagnetism Operates
+My initial suspicion was that diamagnetism results from induced currents. In accordance with Faraday's law, a shifting magnetic field triggers the induction of a current. Consequently, when a material approaches a magnet, the magnetic field undergoes alteration, inducing a current within the material. This current, in turn, generates a magnetic field that opposes the magnet's field, resulting in repulsion.
 
-This is partially true. The difference is that, Faraday's law requires the material to be a closed circuit. Materials have a certain micro formation of what they call cooper pairs. It's essentially a pair of electrons formed by the attractive interaction mediated by lattice vibrations (phonons) in the crystal structure. When magnetic fields are applied, the cooper pairs will move in a circular motion, acting like very tiny closed circuits, creating induced current, and repelling the magnetic field. All the cooper pairs add up, and create a macro effect of repelling the magnetic field. This phenomenon is called diamagnetism.
+This perspective holds partially. However, the difference is in the requirement set forth by Faraday's law—a closed circuit is required for the induction of a current. Here's where it gets interesting: materials possess distinct microstructures termed "Cooper pairs." These pairs comprise a duo of electrons engendered by alluring interactions facilitated by lattice vibrations (phonons) within the crystal structure (I don't know any of this. I just copied it from wiki.). With the application of magnetic fields, these Cooper pairs embark on rotational motion just like small closed circuits. Consequently, they instigate induced currents and create repulsion toward the magnetic field. Importantly, these tiny Cooper pairs add up to manifest a macroscopic effect of magnetic field repulsion—a phenomenon termed diamagnetism.
 
-### How does it relate to superconductivity?
-While diamagnetism is a property of all materials, they are not strong. When materials have resistance, the induced current will die down, in the form of heat. The repelling effect will be very weak. But, when the material has no resistance, the current will keep flowing. As the the material keeps approaching the magnet, the current will increase, and the repelling effect will increase. When the repelling force equals the gravity, the material will levitate. Theoretically, you don't need external energy to maintain the levitation.
+### Relationship with Superconductivity
+While diamagnetism is present in all materials, its strength varies. In materials with resistance, induced currents attenuate, dissipating as heat and yielding feeble repulsion. In contrast, materials that doesn't have resistance allow uninterrupted current flow. As the material approaches a magnet, the current intensifies, enhancing the repulsive effect. When this force equals gravity, levitation occurs. Notably, in theory, levitation doesn't need continuous energy input.
 
-But I can't seem to find a closed form math formula to calculate the repelling force in respect to the position, the gravity, and the magnetic field. I think there are many reasons for that. For example, this is a complex process, that might involve too many factors. Some of them, cannot be easily quantified, like material properties. Not to mention, many of the interaction between the factors are not linear. Rather than digging for a formula, it's more reasonable to use numerical methods to simulate the process.
+Yet, I cannot find an explicit closed-form mathematical equation to quantify repulsion concerning position, gravity, and magnetic field. The reasons are many, like to many factors involved, some challenging to quantify (material properties), and nonlinear interactions. Numerical methods prove more apt for simulating this intricate process than the pursuit of a formula.
 
-Anyway, what I am saying is that, superconductivity might not guarantee levitation. But it's possible to levitate with superconductivity.
+While superconductivity might not guarantee levitation, it facilitates the potential for levitation. It's important to recognize that levitation itself doesn't decisively establish the presence of superconductivity. The phenomenon can come from various origins: superconductivity, magnetism, or robust diamagnetism.
 
-On the other hand, does levitation serve as solid proof of superconductivity? I don't think so either. If something levitates on its own, it could be one of many reasons. It could be superconductivity, hopefully. It could also be because the material is magnetic. In most cases, it's because the material is very strong diamagnetic.
+Notably, robust diamagnetism might resemble the Meissner effect, but it's distinct. The Meissner effect sustains levitation through supercurrents. In contrast, robust diamagnetism sees induced currents dissipate as heat, potentially resulting in eventual descent despite initial levitation. This distinction underscores the complexity of discerning underlying causes based solely on levitation observations.
 
-The thing about strong diamagnetism is that, it looks a lot like Meissner effect, but it's not. While in Meissner effect, the levitation can be maintained by the supercurrent, in strong diamagnetism, the induced current will dissipate as heat. It might not be noticeable in a short period of time. But it will eventually fall down.
+## Addressing the Hype
+Returning to the LK-99,
 
-## Problem with the hype
-Come back to the LK-99
+There are skepticisms regarding the photo proof. In this image, one tip of the material contacts the magnet, an appearance that doesn't look like conventional levitation. Robust diamagnetism, as mentioned earlier, often closely resembles the Meissner effect, particularly in static images or within brief time frames. Notably, while room temperature diamagnetism is very impressive, a photograph in itself cannot conclusively establish superconductivity.
 
-One of the reason people are skeptical about the paper is that, the photo is all the evidence they have. In the photo, one tip of the material is touching the magnet. This doesn't look a lot like levitation. 
+An alternative viewpoint asserts that even if not indicative of superconductivity, LK-99's properties are impressive, possibly hinting at a distinct avenue for attaining room temperature superconductivity. However, a logical problem emerges. The pursuit of superconductivity isn't linear; it doesn't resemble climbing a mountain where diamagnetism marks a milestone en route to the ultimate summit of superconductivity. Instead, it's more like navigating a maze—apparently promising paths can be a dead-end. Indeed, what if robust diamagnetism is as far as this path can go down? 
 
-As I have previously mentioned, strong diamagnetism is hard to distinguish from Meissner effect, especially in a short period of time or in a static photo. Though room temp diamagnetism is very impressive, the photo itself cannot prove it's superconducting. 
-
-Some argue that, well, even if it's not superconducting, it's still a very impressive material. They claim it might show us a different way to achieve room temperature superconductivity. But there's a logic problem here. Achieving superconducting is not a linear path. It's not like it's a moutain to climb, where the top is superconducting, and at 80% of the height it's diamagnetism and if you just stick to it, you will reach the top eventually. The process is more like a maze. Some of the ends looks promising, but that might be as far as it can get you. What if this strong diamagnetism is the end of this path? That's totally possible. 
+Let's take a step back. Assuming LK-99 truly is superconductivity, a significant problem still exists. The methodology applied involves a fusion of materials, subjecting them to specific processes, and just filter the outcome for instances of superconductivity. This approach hardly works in mass production, which is crucial for real-world applications. In practical scenarios, consistent mass production with good quality standards is imperative. While this article holds potential within the laboratory context, its application extends little beyond those boundaries. 
 
 ## Conclusion
-The areas that would actually benefit from superconductivity are:
-1. Power transmission
-2. Magnetic levitation
-3. MRI
-4. Particle accelerator
+In conclusion, it's important to reiterate that the aim of this article is not to validate or invalidate the claims presented in the paper. I am not qualified to do that; my intent is solely to comprehend the underlying scientific principles. The explanation I've present deliberately simplified and might even contain errors. It shouldn't be considered as a scientific article.
+
+I have to express my reservations about the hype surrounding this issue. While it's commendable for laymen to engage with science, it's important to approach it rationally and responsibly. Blindly endorsing or debunking the hype, especially without a grasp of the science behind, makes it more a political or religious gesture—just like cheering for a sports team. This is not a stance to take pride in.
+
+However, some individuals harbor more vested interests. Fluctuations in stock prices of remotely related companies have gone through extreme volatility. While a few may have profited, the majority likely haven't. It's worth acknowledging that individuals actively defending the paper might be safeguarding their investments. This is a misguided strategy. Attempting to sway stock prices through social media posts is delusional. Most stock trading isn't executed by humans but by powerful computers employing complex algorithms. These systems might have assessed and even calculated price shifts, employing take-profit and stop-loss parameters long before individuals are even aware. When news breaks and people scramble to catch up, the computers capitalize by selling to these individuals, effectively capitalizing on their enthusiasm.
+
+In essence, the message is clear—resist the urge to propagate hype.
