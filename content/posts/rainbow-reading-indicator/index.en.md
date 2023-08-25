@@ -11,7 +11,7 @@ featured:
   weight: 1
 ---
 ## Introduction
-This comes from my implementation of the blog theme. I've seen this kind of reading indicator in some websites. They are thing bars that is fixed on one side of the window, mostly top. It will take the same percentage of the window width as the percentage of the page you have scrolled. It's a way to tell the reader how much of the page they have read.
+This comes from my implementation of the blog theme. I've seen this kind of reading indicator in some websites. They are thin bars that is fixed on one side of the window, mostly top. It will take the same percentage of the window width as the percentage of the page you have scrolled. It's a way to tell the reader how much of the page they have read.
 
 ## Single Color Indicator
 The idea is very simple. You have a div called `reading-indicator` that is fixed on the top of the window. It has a width of 100% and a height of 5px. It's background color is the color you want to use for the reading indicator. Then you have a JavaScript function that calculates the percentage of the page you have scrolled. The percentage is then used to set the width of the `reading-indicator` div.
